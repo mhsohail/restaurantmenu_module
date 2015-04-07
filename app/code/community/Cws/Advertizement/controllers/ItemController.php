@@ -8,7 +8,7 @@ class Cws_Advertizement_ItemController extends Mage_Core_Controller_Front_Action
         return Mage::getSingleton('advertizement/session');
     }
 
-/**
+	/**
      *    validate Customer Login and redirect previous page 
      * */
     protected function _validateCustomerLogin() {
@@ -235,7 +235,7 @@ class Cws_Advertizement_ItemController extends Mage_Core_Controller_Front_Action
 			//echo $e->getMessage(); 
 			Mage::getSingleton('core/session')->addSuccess($e->getMessage());
 		}
-		$this->_redirect("*/*/");
+		$this->_redirect("*/index/");
 	}
 	
 	

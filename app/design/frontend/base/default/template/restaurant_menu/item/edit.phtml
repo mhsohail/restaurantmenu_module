@@ -84,7 +84,7 @@ function getCategoriesFor($store_id) {
 var productForm = new VarienForm('form-validate-advertizement', true);
 //]]>
 function callController(sid) {
-	new Ajax.Request("<?php echo $this->getUrl('advertizement/index/gettoreategory') ?>", {
+	new Ajax.Request("<?php echo $this->getUrl('restaurant/index/gettoreategory') ?>", {
 		method: 'Post',
 		parameters: {'store_id':sid},
 		onComplete: function(transport) {

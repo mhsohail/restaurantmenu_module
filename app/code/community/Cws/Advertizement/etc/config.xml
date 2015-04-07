@@ -96,7 +96,7 @@
                 <use>standard</use>
                 <args>
                     <module>Cws_Advertizement</module>
-                    <frontName>advertizement</frontName>
+                    <frontName>restaurant</frontName>
                 </args>
             </cws_advertizement>
         </routers>
