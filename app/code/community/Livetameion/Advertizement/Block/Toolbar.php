@@ -1,10 +1,9 @@
 <?php
-class Cws_Advertizement_Block_Toolbar extends Mage_Catalog_Block_Product_List_Toolbar{
-    public function getPagerHtml()
-    {
-        $pagerBlock = $this->getLayout()->createBlock('page/html_pager');
- 
-        if ($pagerBlock instanceof Varien_Object) {
+class Livetameion_Advertizement_Block_Toolbar extends Mage_Catalog_Block_Product_List_Toolbar {
+	public function getPagerHtml() {
+		$pagerBlock = $this->getLayout()->createBlock('page/html_pager');
+		
+		if ($pagerBlock instanceof Varien_Object) {
  
             /* @var $pagerBlock Mage_Page_Block_Html_Pager */
             $pagerBlock->setAvailableLimit($this->getAvailableLimit());
@@ -16,7 +15,7 @@ class Cws_Advertizement_Block_Toolbar extends Mage_Catalog_Block_Product_List_To
             ->setPageVarName($this->getPageVarName())
             ->setLimit($this->getLimit())
             ->setCollection($this->getCollection());
-            return $pagerBlock->toHtml();
+			return $pagerBlock->toHtml();
         }
         return '';
     }

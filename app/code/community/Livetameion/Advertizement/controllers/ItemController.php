@@ -1,5 +1,5 @@
 <?php
-class Cws_Advertizement_ItemController extends Mage_Core_Controller_Front_Action {
+class Livetameion_Advertizement_ItemController extends Mage_Core_Controller_Front_Action {
 
 /**
      *    Create session 

@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <Cws_Advertizement>
+        <Livetameion_Advertizement>
             <active>true</active>
             <codePool>community</codePool>
-        </Cws_Advertizement>
+        </Livetameion_Advertizement>
     </modules>
 </config>

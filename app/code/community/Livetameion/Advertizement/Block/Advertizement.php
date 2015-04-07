@@ -1,9 +1,7 @@
 <?php
-class Cws_Advertizement_Block_Advertizement extends Mage_Core_Block_Template
-{
+class Livetameion_Advertizement_Block_Advertizement extends Mage_Core_Block_Template {
 	
-	/*public function __construct()
-	{
+	/*public function __construct() {
 		parent::__construct();
 		$collection = Mage::getModel('advertizement/advertizement')->getCollection();
 		$this->setCollection($collection);
@@ -25,9 +23,8 @@ class Cws_Advertizement_Block_Advertizement extends Mage_Core_Block_Template
 	{
 		return $this->getChildHtml('pager');
 	}*/
-	 public function __construct()
-    {
-        parent::__construct();   
+	public function __construct() {
+		parent::__construct();   
 			$loggedUser = Mage::getSingleton( 'customer/session', array('name' => 'frontend') );
             $customer = $loggedUser->getCustomer();
           $customerId=$customer->getId();

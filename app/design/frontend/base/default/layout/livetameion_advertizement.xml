@@ -3,14 +3,14 @@
 	<customer_account>
 		<reference name="customer_account_navigation">
 			<action method="addLink" translate="label" module="advertizement">
-				<name>advertizement</name>
-				<path>advertizement/</path>
-				<label>Advertising Management</label>
+				<name>restaurant</name>
+				<path>restaurant/</path>
+				<label>Restaurant Menu</label>
 			</action>
 		</reference>
 	</customer_account>		
 	
-	<cws_advertizement_index_index>
+	<livetameion_advertizement_index_index>
 		<remove name="right" />
 		<remove name="left" />
 		<action method="setTemplate">
@@ -44,9 +44,9 @@
             <block type="supplierfrontendproductuploader/dashboard" name="supplierfrontendproductuploader_dashboard1"
                    template="supplierfrontendproductuploader/dashboard1.phtml"/>
 		</reference>-->
-	</cws_advertizement_index_index>    
+	</livetameion_advertizement_index_index>    
     
-	<cws_advertizement_index_show>
+	<livetameion_advertizement_index_show>
 		<remove name="right" />
 		<remove name="left" />
 		<action method="setTemplate">
@@ -80,9 +80,9 @@
             <block type="supplierfrontendproductuploader/dashboard" name="supplierfrontendproductuploader_dashboard1"
                    template="supplierfrontendproductuploader/dashboard1.phtml"/>
 		</reference>-->
-	</cws_advertizement_index_show>
+	</livetameion_advertizement_index_show>
 	
-	<cws_advertizement_index_add>
+	<livetameion_advertizement_index_add>
         <remove name="right"/>
         <remove name="left"/>
         <reference name="head">            
@@ -110,10 +110,10 @@
        <reference name="content">            
         <block type="advertizement/add" name="advertizement_add" template="restaurant_menu/advertizement/add.phtml"/>              
         </reference>
-    </cws_advertizement_index_add>
+    </livetameion_advertizement_index_add>
 	
 	<!-- layout for editing advertisement -->
-	<cws_advertizement_index_edit>
+	<livetameion_advertizement_index_edit>
         <remove name="right"/>
         <remove name="left"/>
         <reference name="head">            
@@ -141,9 +141,9 @@
        <reference name="content">            
         <block type="advertizement/edit" name="advertizement_edit" template="restaurant_menu/advertizement/edit.phtml"/>              
         </reference>
-    </cws_advertizement_index_edit>
+    </livetameion_advertizement_index_edit>
 	
-	<cws_advertizement_item_index>
+	<livetameion_advertizement_item_index>
 		<remove name="right" />
 		<remove name="left" />
 		<action method="setTemplate">
@@ -177,9 +177,9 @@
             <block type="supplierfrontendproductuploader/dashboard" name="supplierfrontendproductuploader_dashboard1"
                    template="supplierfrontendproductuploader/dashboard1.phtml"/>
 		</reference>-->
-	</cws_advertizement_item_index>    
+	</livetameion_advertizement_item_index>    
     
-	<cws_advertizement_item_add>
+	<livetameion_advertizement_item_add>
         <remove name="right"/>
         <remove name="left"/>
         <reference name="head">            
@@ -207,10 +207,10 @@
 		<reference name="content">            
 			<block type="advertizement/add" name="advertizement_add" template="restaurant_menu/item/add.phtml"/>
         </reference>
-    </cws_advertizement_item_add>
+    </livetameion_advertizement_item_add>
 	
 	<!-- layout for editing advertisement -->
-	<cws_advertizement_item_edit>
+	<livetameion_advertizement_item_edit>
         <remove name="right"/>
         <remove name="left"/>
         <reference name="head">            
@@ -238,6 +238,6 @@
 		<reference name="content">            
 			<block type="advertizement/edit" name="advertizement_edit" template="restaurant_menu/item/edit.phtml"/>
         </reference>
-    </cws_advertizement_item_edit>
+    </livetameion_advertizement_item_edit>
 	
 </layout>
