@@ -22,6 +22,6 @@ class Livetameion_Advertizement_Model_Resource_Item extends Mage_Core_Model_Reso
 {
     protected function _construct()
     {
-        $this->_init('advertizement/item','item_id');
+        $this->_init('restaurant/item','item_id');
     }
 }

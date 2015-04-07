@@ -5,7 +5,7 @@ class Livetameion_Advertizement_ItemController extends Mage_Core_Controller_Fron
      *    Create session 
      * */
     protected function _getSession() {
-        return Mage::getSingleton('advertizement/session');
+        return Mage::getSingleton('restaurant/session');
     }
 
 	/**
@@ -26,20 +26,20 @@ class Livetameion_Advertizement_ItemController extends Mage_Core_Controller_Fron
 	public function indexAction() {
 		$this->_validateCustomerLogin();
 		$this->loadLayout();  
-		$this->_initLayoutMessages('advertizement/session');  
+		$this->_initLayoutMessages('restaurant/session');  
 		$this->renderLayout();
 	}
     public function addAction() {
 		$this->_validateCustomerLogin();
 		$this->loadLayout();
-		$this->_initLayoutMessages('advertizement/session');
+		$this->_initLayoutMessages('restaurant/session');
 		$this->renderLayout();
 	}
 	
 	public function editAction() {
 		$this->_validateCustomerLogin();
 		$this->loadLayout();    
-		$this->_initLayoutMessages('advertizement/session');  
+		$this->_initLayoutMessages('restaurant/session');  
         $this->renderLayout(); 
     }
 	
@@ -151,7 +151,7 @@ class Livetameion_Advertizement_ItemController extends Mage_Core_Controller_Fron
 					
 					// SAVE POSTED DATA
 					$data = Mage::app()->getRequest()->getPost();
-					$itemModel = Mage::getModel('advertizement/item');
+					$itemModel = Mage::getModel('restaurant/item');
 					if(!empty($data)) {
 						$itemModel->setRestaurantmenuId($restaurantmenu_id)
 							->setName($data['item_name'][$i])
@@ -205,7 +205,7 @@ class Livetameion_Advertizement_ItemController extends Mage_Core_Controller_Fron
 					'image' => $post['item_image'],
 				);
 				
-				$model = Mage::getModel('advertizement/item')->load($this->getRequest()->getParam('item_id'))->addData($data);
+				$model = Mage::getModel('restaurant/item')->load($this->getRequest()->getParam('item_id'))->addData($data);
 				$ad_id = $this->getRequest()->getParam('item_id');
 				
 				try {
@@ -225,7 +225,7 @@ class Livetameion_Advertizement_ItemController extends Mage_Core_Controller_Fron
 	
 	public function deleteAction() {
 		$id = $this->getRequest()->getParam('id');
-		$model = Mage::getModel('advertizement/item');
+		$model = Mage::getModel('restaurant/item');
 		
 		try {
 			$model->setId($id)->delete();
@@ -253,7 +253,7 @@ class Livetameion_Advertizement_ItemController extends Mage_Core_Controller_Fron
 			$arrcustData = array('active_status'=>'0');
 		}
 		
-		$model = Mage::getModel('advertizement/advertizement')->load($id)->addData($arrcustData );  
+		$model = Mage::getModel('restaurant/advertizement')->load($id)->addData($arrcustData );  
 		try {
 			$model->setId($id)->save();
 			//echo "Data deleted successfully.";

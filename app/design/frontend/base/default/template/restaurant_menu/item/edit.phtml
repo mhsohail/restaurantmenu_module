@@ -3,7 +3,7 @@
 </div>
 <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
 <?php
-$item = Mage::getModel('advertizement/item')->load($this->getRequest()->getParam('id'));
+$item = Mage::getModel('restaurant/item')->load($this->getRequest()->getParam('id'));
 ?>
 <form action="<?php echo $this->getUrl('*/item/update') ?>" method="post" id="form-validate-advertizement" enctype="multipart/form-data">
 	<div class="fieldset">

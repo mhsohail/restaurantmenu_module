@@ -3,7 +3,7 @@ class Livetameion_Advertizement_Block_Advertizement extends Mage_Core_Block_Temp
 	
 	/*public function __construct() {
 		parent::__construct();
-		$collection = Mage::getModel('advertizement/advertizement')->getCollection();
+		$collection = Mage::getModel('restaurant/advertizement')->getCollection();
 		$this->setCollection($collection);
 	}
 
@@ -31,7 +31,7 @@ class Livetameion_Advertizement_Block_Advertizement extends Mage_Core_Block_Temp
             
           //$customerId = Mage::getSingleton('customer/session')->getCustomerId();
          //exit;
-        $collection = Mage::getModel('advertizement/advertizement')->getCollection()->addFieldToFilter('merchant_id', $customerId);
+        $collection = Mage::getModel('restaurant/advertizement')->getCollection()->addFieldToFilter('merchant_id', $customerId);
         $this->setCollection($collection);
     }
  
@@ -69,8 +69,7 @@ class Livetameion_Advertizement_Block_Advertizement extends Mage_Core_Block_Temp
     public function getSortBy(){
         return 'restaurantmenu_id';
     }
-    public function getToolbarBlock()
-    {
+    public function getToolbarBlock() {
         $block = $this->getLayout()->createBlock('advertizement/toolbar', microtime());
         return $block;
     }

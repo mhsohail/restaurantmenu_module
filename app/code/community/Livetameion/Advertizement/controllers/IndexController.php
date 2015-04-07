@@ -5,7 +5,7 @@ class Livetameion_Advertizement_IndexController extends Mage_Core_Controller_Fro
      *    Create session 
      * */
     protected function _getSession() {
-        return Mage::getSingleton('advertizement/session');
+        return Mage::getSingleton('restaurant/session');
     }
 
 /**
@@ -27,13 +27,13 @@ class Livetameion_Advertizement_IndexController extends Mage_Core_Controller_Fro
     public function indexAction() {
 		$this->_validateCustomerLogin();
 		$this->loadLayout();  
-		$this->_initLayoutMessages('advertizement/session');  
+		$this->_initLayoutMessages('restaurant/session');  
 		$this->renderLayout();
 	}
     public function addAction() {
 		$this->_validateCustomerLogin();
 		$this->loadLayout();    
-		$this->_initLayoutMessages('advertizement/session');  
+		$this->_initLayoutMessages('restaurant/session');  
         $this->renderLayout();    
      
     }
@@ -41,14 +41,14 @@ class Livetameion_Advertizement_IndexController extends Mage_Core_Controller_Fro
 	public function editAction() {
 		$this->_validateCustomerLogin();
 		$this->loadLayout();    
-		$this->_initLayoutMessages('advertizement/session');  
+		$this->_initLayoutMessages('restaurant/session');  
         $this->renderLayout(); 
     }
 	
 	public function showAction() {
 		$this->_validateCustomerLogin();
 		$this->loadLayout();  
-		$this->_initLayoutMessages('advertizement/session');  
+		$this->_initLayoutMessages('restaurant/session');  
 		$this->renderLayout();
 	}
 	
@@ -130,7 +130,7 @@ class Livetameion_Advertizement_IndexController extends Mage_Core_Controller_Fro
 		$customer_id = Mage::getSingleton('customer/session')->getId(); // Get Current User id
 		$data = Mage::app()->getRequest()->getPost();
 		
-		$menuModel = Mage::getModel('advertizement/advertizement');
+		$menuModel = Mage::getModel('restaurant/advertizement');
 		if(!empty($data)) {
 			$menuModel
 				->setMerchantId($customer_id)
@@ -174,7 +174,7 @@ class Livetameion_Advertizement_IndexController extends Mage_Core_Controller_Fro
 					//$data['item_image'] = $new_file_name;
 					
 					// SAVE POSTED DATA
-					$itemModel = Mage::getModel('advertizement/item');
+					$itemModel = Mage::getModel('restaurant/item');
 					if(!empty($data)) {
 						$itemModel->setRestaurantmenuId($restaurantmenu_id)
 							->setName($data['item_name'][$i])
@@ -236,7 +236,7 @@ class Livetameion_Advertizement_IndexController extends Mage_Core_Controller_Fro
 					'ip_address' => $this->getUserIpAddress(),
 					'page_location' => $post['page_location']
 				);
-				$model = Mage::getModel('advertizement/advertizement')->load($ad_id)->addData($data);
+				$model = Mage::getModel('restaurant/advertizement')->load($ad_id)->addData($data);
 				$ad_id = $post['restaurantmenu_id'];
 				try {
 					$model->setId($ad_id)->save();
@@ -254,7 +254,7 @@ class Livetameion_Advertizement_IndexController extends Mage_Core_Controller_Fro
 	
 	public function deleteAction() {
 		$id = $this->getRequest()->getParam('id');
-		$model = Mage::getModel('advertizement/advertizement');
+		$model = Mage::getModel('restaurant/advertizement');
 		
 		try {
 			$model->setId($id)->delete();
@@ -281,7 +281,7 @@ class Livetameion_Advertizement_IndexController extends Mage_Core_Controller_Fro
 			$arrcustData = array('active_status'=>'0');
 		}
 		
-		$model = Mage::getModel('advertizement/advertizement')->load($id)->addData($arrcustData );  
+		$model = Mage::getModel('restaurant/advertizement')->load($id)->addData($arrcustData );  
 		try {
 			$model->setId($id)->save();
 			//echo "Data deleted successfully.";

@@ -49,10 +49,10 @@
             </advertizement>            
         </blocks>
        <models>
-            <advertizement>
+            <restaurant>
                 <class>Livetameion_Advertizement_Model</class>
                 <resourceModel>advertizement_resource</resourceModel>
-            </advertizement>
+            </restaurant>
 			
             <advertizement_resource>
                 <class>Livetameion_Advertizement_Model_Resource</class>                               

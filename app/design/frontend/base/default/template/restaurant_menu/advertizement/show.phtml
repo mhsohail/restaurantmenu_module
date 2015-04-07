@@ -24,7 +24,7 @@ $getAllCategoriesDATA= Mage::helper('advertizement')->getAllCategoriesDATA();
 //print_r($getAllCategoriesDATA);?>
 <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
 <?php //$collection = $this->getCollection(); ?>
-<?php $collection = Mage::getModel('advertizement/item')->getCollection()->addFieldToFilter('restaurantmenu_id', $this->getRequest()->getParam('id')); ?>
+<?php $collection = Mage::getModel('restaurant/item')->getCollection()->addFieldToFilter('restaurantmenu_id', $this->getRequest()->getParam('id')); ?>
 
 <div class="page-title adverizent">
 	<h1><?php echo $this->__('Menu Items') ?></h1>

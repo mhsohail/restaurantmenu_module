@@ -18,11 +18,8 @@
  * @author     Javed Alam <javed.alam@cwsinfotech.com>
  */
 
-class Livetameion_Advertizement_Model_Advertizement extends Mage_Core_Model_Abstract
-{
+class Livetameion_Advertizement_Model_Advertizement extends Mage_Core_Model_Abstract {
 	protected function _construct() {
-        parent::_construct();
-        $this->_init('advertizement/advertizement');
-    }
-
+		parent::_construct();
+	}
 }

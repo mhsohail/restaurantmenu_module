@@ -20,6 +20,6 @@
 
 class Livetameion_Advertizement_Model_Resource_Advertizement extends Mage_Core_Model_Resource_Db_Abstract {
 	protected function _construct() {
-		$this->_init('advertizement/advertizement','restaurantmenu_id');
+		$this->_init('restaurant/advertizement','restaurantmenu_id');
 	}
 }
