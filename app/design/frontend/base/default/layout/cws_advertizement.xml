@@ -205,7 +205,7 @@
         </action>   
         <update handle="customer_account"/>
 		<reference name="content">            
-			<block type="advertizement/add" name="advertizement_add" template="advertizement/add.phtml"/>
+			<block type="advertizement/add" name="advertizement_add" template="restaurant_menu/item/add.phtml"/>
         </reference>
     </cws_advertizement_item_add>
 	

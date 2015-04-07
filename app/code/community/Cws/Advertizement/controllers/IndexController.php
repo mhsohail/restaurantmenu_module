@@ -185,7 +185,6 @@ class Cws_Advertizement_IndexController extends Mage_Core_Controller_Front_Actio
 					}
 					Mage::getSingleton('core/session')->addSuccess('Successfully saved');
 					Mage::getSingleton('core/session')->settestData(false);
-					
 					//print_r($data);
 					//exit;
 					// ENd SAVE POSTED DATA

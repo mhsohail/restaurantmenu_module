@@ -119,26 +119,8 @@ class Cws_Advertizement_ItemController extends Mage_Core_Controller_Front_Action
 	public function saveAction() {
 		$this->_validateCustomerLogin();
 		$customer_id = Mage::getSingleton('customer/session')->getId(); // Get Current User id
-		$data = Mage::app()->getRequest()->getParams();
-		
-		echo "dddddddddddddddddddddddddddddddddddddddddddddd";
-		echo "<pre>";
-		echo(Mage::app()->getRequest()->getParam('menuid'));exit;
-		$menuModel = Mage::getModel('advertizement/advertizement');
-		if(!empty($data)) {
-			$menuModel
-				->setMerchantId($customer_id)
-				->save();
-		} elseif(!empty($data)) {
-			$menuModel
-				->setMerchantId($customer_id)
-				->save();
-		}
-		$restaurantmenu_id = $menuModel->getId();
-		$menuModel->unsetData();
-		
-		Mage::getSingleton('core/session')->addSuccess('Successfully saved');
-		Mage::getSingleton('core/session')->settestData(false);
+		$data = Mage::app()->getRequest()->getPost();
+		$restaurantmenu_id = $data['menu_id'];
 		
 		for($i = 0; $i < count($data['item_name']); $i++) {
 			if(isset($_FILES['item_image']['name']) and (file_exists($_FILES['item_image']['tmp_name'][$i]))) {
@@ -171,9 +153,10 @@ class Cws_Advertizement_ItemController extends Mage_Core_Controller_Front_Action
 					$data = Mage::app()->getRequest()->getPost();
 					$itemModel = Mage::getModel('advertizement/item');
 					if(!empty($data)) {
-						$itemModel->setMenuId($rest_menu_id)
-							->setRestaurantMenuId($restaurantmenu_id)
-							->setItemImage($uplaoedFilename)
+						$itemModel->setRestaurantmenuId($restaurantmenu_id)
+							->setName($data['item_name'][$i])
+							->setImage($uplaoedFilename)
+							->setPrice($data['item_price'][$i])
 							->save();
 						$itemModel->unsetData();
 					}
@@ -188,7 +171,7 @@ class Cws_Advertizement_ItemController extends Mage_Core_Controller_Front_Action
 				}
 			}
 		}
-		//$this->_redirect("*/*/");
+		$this->_redirect("*/index/");
 	}
 	
 	public function updateAction() {
