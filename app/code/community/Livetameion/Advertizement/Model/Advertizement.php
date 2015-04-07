@@ -21,5 +21,6 @@
 class Livetameion_Advertizement_Model_Advertizement extends Mage_Core_Model_Abstract {
 	protected function _construct() {
 		parent::_construct();
+		$this->_init('restaurant/advertizement');
 	}
 }
