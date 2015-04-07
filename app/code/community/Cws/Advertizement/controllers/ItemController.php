@@ -119,9 +119,11 @@ class Cws_Advertizement_ItemController extends Mage_Core_Controller_Front_Action
 	public function saveAction() {
 		$this->_validateCustomerLogin();
 		$customer_id = Mage::getSingleton('customer/session')->getId(); // Get Current User id
-		$data = Mage::app()->getRequest()->getPost();
+		$data = Mage::app()->getRequest()->getParams();
+		
+		echo "dddddddddddddddddddddddddddddddddddddddddddddd";
 		echo "<pre>";
-		print_r($data);exit;
+		echo(Mage::app()->getRequest()->getParam('menuid'));exit;
 		$menuModel = Mage::getModel('advertizement/advertizement');
 		if(!empty($data)) {
 			$menuModel
