@@ -9,7 +9,7 @@ class Livetameion_Restaurant_Block_Edit extends Mage_Core_Block_Template {
 		if ($this->getData('back_url')) {
 			return $this->getData('back_url');
 		} else {
-			return $this->getUrl('advertizement');
+			return $this->getUrl('restaurant');
 		}
 	}   
 }

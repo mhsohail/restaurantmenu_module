@@ -1,5 +1,5 @@
 <?php
-class Livetameion_Restaurant_Block_Advertizement extends Mage_Core_Block_Template {
+class Livetameion_Restaurant_Block_Menu extends Mage_Core_Block_Template {
 	
 	/*public function __construct() {
 		parent::__construct();

@@ -1,6 +1,6 @@
 <?php
 /**
- * Livetameion Advertizement Plugin
+ * Livetameion Restaurant Plugin
  *
  * NOTICE OF LICENSE
  *
@@ -10,7 +10,7 @@
  * If you are unable to access it on the World Wide Web, please send an email
  * To: javed.alam@cwsinfotech.com.  We will send you a copy of the source file.
  *
- * @category   Advertizement Plugin
+ * @category   Restaurant Plugin
  * @package    Livetameion_Restaurant
  * @copyright  Copyright (c) 2014 Livetameion Technology Pvt. Ltd., India
  *             http://www.cwstechnology.com

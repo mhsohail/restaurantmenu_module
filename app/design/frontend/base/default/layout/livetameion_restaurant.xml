@@ -38,7 +38,7 @@
         </reference>
 		<reference name="content">
 			<!-- <block type="advertizement/navbar" name="advertizement_nav" template="/advertizement/nav1.phtml"/> -->
-			<block type="restaurant/advertizement" name="advertizement_advertizement" template="restaurant_menu/advertizement/advertizement.phtml" />
+			<block type="restaurant/menu" name="advertizement_advertizement" template="restaurant_menu/advertizement/advertizement.phtml" />
 			<!--    <block type="advertizement/collection" name="advertizement_collection" template="advertizement/collection.phtml"/>-->
         </reference>
 		<!--    <reference name="content">

@@ -1,6 +1,6 @@
 <?php
 /**
- * Livetameion Advertizement Plugin
+ * Livetameion Restaurant Plugin
  *
  * NOTICE OF LICENSE
  *
@@ -10,19 +10,33 @@
  * If you are unable to access it on the World Wide Web, please send an email
  * To: javed.alam@cwsinfotech.com.  We will send you a copy of the source file.
  *
- * @category   Advertizement Plugin
- * @package    Livetameion_Advertizement
+ * @category   Restaurant Plugin
+ * @package    Livetameion_Restaurant
  * @copyright  Copyright (c) 2014 Livetameion Technology Pvt. Ltd., India
  *             http://www.cwstechnology.com
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @author     Javed Alam <javed.alam@cwsinfotech.com>
  */
 
+/*
+getTable('module_alias/table_tag')
+table_tag is defined in <entities> tag in etc/config.xml file like below
+so in this case, it should be getTable('module_alias/menu') or getTable('module_alias/item')
+<entities>
+	<menu>
+		<table>restaurant_menu</table>
+    </menu>
+	<item>
+		<table>restaurant_menu_item</table>
+	</item>
+</entities>
+*/ 
+
 $installer = $this;
 $installer->startSetup();
 $installer->run("    
--- DROP TABLE IF EXISTS {$this->getTable('advertizement/advertizement')};
-CREATE TABLE {$this->getTable('advertizement/advertizement')} (
+-- DROP TABLE IF EXISTS {$this->getTable('restaurant/menu')};
+CREATE TABLE {$this->getTable('restaurant/menu')} (
 	`restaurantmenu_id` int(11) NOT NULL AUTO_INCREMENT,
 	`merchant_id` int(11) NOT NULL,
 	`createddate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -33,8 +47,8 @@ ENGINE = InnoDB;"
 );
 
 $installer->run("    
--- DROP TABLE IF EXISTS restaurant_menu_item;
-CREATE TABLE restaurant_menu_item (
+-- DROP TABLE IF EXISTS {$this->getTable('restaurant/item')};
+CREATE TABLE {$this->getTable('restaurant/item')} (
 	`item_id` int(11) NOT NULL AUTO_INCREMENT,
 	`restaurantmenu_id` int(11) NOT NULL,
 	`name` varchar(255) NOT NULL,
