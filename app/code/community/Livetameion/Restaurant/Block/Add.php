@@ -1,5 +1,5 @@
 <?php
-class Livetameion_Advertizement_Block_Add extends Mage_Core_Block_Template {  
+class Livetameion_Restaurant_Block_Add extends Mage_Core_Block_Template {  
 	
 	public function __construct() {
 		parent::__construct();
@@ -9,7 +9,7 @@ class Livetameion_Advertizement_Block_Add extends Mage_Core_Block_Template {
 		if ($this->getData('back_url')) {
 			return $this->getData('back_url');
 		} else {
-			return $this->getUrl('advertizement');
+			return $this->getUrl('restaurant');
 		}
 	}
 }

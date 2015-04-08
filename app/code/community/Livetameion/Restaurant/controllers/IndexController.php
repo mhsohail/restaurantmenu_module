@@ -1,5 +1,5 @@
 <?php
-class Livetameion_Advertizement_IndexController extends Mage_Core_Controller_Front_Action {
+class Livetameion_Restaurant_IndexController extends Mage_Core_Controller_Front_Action {
 
 /**
      *    Create session 
@@ -18,16 +18,31 @@ class Livetameion_Advertizement_IndexController extends Mage_Core_Controller_Fro
             $session->setBeforeAuthUrl(Mage::helper('core/url')->getCurrentUrl());
             $this->_redirect('customer/account/login/');
             return $this;
-        }elseif(!Mage::helper('advertizement')->isMarketplaceActiveSellar()){
+        }elseif(!Mage::helper('restaurant')->isMarketplaceActiveSellar()){
             $this->_redirect('customer/account/');
         }
     }
-
-
+	
     public function indexAction() {
+		//$collection = Mage::getModel('restaurant/menu')->getCollection();
+		//echo $collection->getSize();exit;
 		$this->_validateCustomerLogin();
-		$this->loadLayout();  
-		$this->_initLayoutMessages('restaurant/session');  
+		$this->loadLayout();
+		
+		/* there should be a Session class in Models folder with $this->init('restaurant'); code
+		 * in constructor to work for the below line properly
+			Also, in etc/config.xml file, the class path of the model should be correct like below, otherwise
+			it will show error: "Invalid messages storage "restaurant/session" for layout messages initialization"
+			<models>
+            ...
+			<restaurant>
+                <class>Livetameion_Restaurant_Model</class>
+                <resourceModel>restaurant_resource</resourceModel>
+            </restaurant>
+			...
+			<models>
+		*/
+		$this->_initLayoutMessages('restaurant/session');
 		$this->renderLayout();
 	}
     public function addAction() {
@@ -130,7 +145,7 @@ class Livetameion_Advertizement_IndexController extends Mage_Core_Controller_Fro
 		$customer_id = Mage::getSingleton('customer/session')->getId(); // Get Current User id
 		$data = Mage::app()->getRequest()->getPost();
 		
-		$menuModel = Mage::getModel('restaurant/advertizement');
+		$menuModel = Mage::getModel('restaurant/menu');
 		if(!empty($data)) {
 			$menuModel
 				->setMerchantId($customer_id)
@@ -236,7 +251,7 @@ class Livetameion_Advertizement_IndexController extends Mage_Core_Controller_Fro
 					'ip_address' => $this->getUserIpAddress(),
 					'page_location' => $post['page_location']
 				);
-				$model = Mage::getModel('restaurant/advertizement')->load($ad_id)->addData($data);
+				$model = Mage::getModel('restaurant/menu')->load($ad_id)->addData($data);
 				$ad_id = $post['restaurantmenu_id'];
 				try {
 					$model->setId($ad_id)->save();
@@ -254,7 +269,7 @@ class Livetameion_Advertizement_IndexController extends Mage_Core_Controller_Fro
 	
 	public function deleteAction() {
 		$id = $this->getRequest()->getParam('id');
-		$model = Mage::getModel('restaurant/advertizement');
+		$model = Mage::getModel('restaurant/menu');
 		
 		try {
 			$model->setId($id)->delete();
@@ -281,7 +296,7 @@ class Livetameion_Advertizement_IndexController extends Mage_Core_Controller_Fro
 			$arrcustData = array('active_status'=>'0');
 		}
 		
-		$model = Mage::getModel('restaurant/advertizement')->load($id)->addData($arrcustData );  
+		$model = Mage::getModel('restaurant/menu')->load($id)->addData($arrcustData );  
 		try {
 			$model->setId($id)->save();
 			//echo "Data deleted successfully.";

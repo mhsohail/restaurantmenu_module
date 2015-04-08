@@ -19,12 +19,12 @@
 	color: #fff !important;
 }
 </style>
-<?php $getStoreData= Mage::helper('advertizement')->getStoreData();
-$getAllCategoriesDATA= Mage::helper('advertizement')->getAllCategoriesDATA();
+<?php $getStoreData= Mage::helper('restaurant')->getStoreData();
+$getAllCategoriesDATA= Mage::helper('restaurant')->getAllCategoriesDATA();
 //print_r($getAllCategoriesDATA);?>
 <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
 <?php //$collection = $this->getCollection(); ?>
-<?php $collection = Mage::getModel('restaurant/advertizement')->getCollection(); ?>
+<?php $collection = Mage::getModel('restaurant/menu')->getCollection(); ?>
 
 <div class="page-title adverizent">
 	<h1><?php echo $this->__('My Menus') ?></h1>
@@ -72,4 +72,3 @@ $getAllCategoriesDATA= Mage::helper('advertizement')->getAllCategoriesDATA();
 <?php else: ?>
     <p><?php echo $this->__('No restaurant menus available.'); ?></p>
 <?php endif ?>
-

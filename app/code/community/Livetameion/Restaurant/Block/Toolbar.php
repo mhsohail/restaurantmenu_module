@@ -1,5 +1,5 @@
 <?php
-class Livetameion_Advertizement_Block_Toolbar extends Mage_Catalog_Block_Product_List_Toolbar {
+class Livetameion_Restaurant_Block_Toolbar extends Mage_Catalog_Block_Product_List_Toolbar {
 	public function getPagerHtml() {
 		$pagerBlock = $this->getLayout()->createBlock('page/html_pager');
 		

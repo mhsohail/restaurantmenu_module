@@ -90,35 +90,35 @@ function callController(sid) {
 }
 
 function add_item_fields() {
-			var new_item_html ="<span class='delete_menu_item' onClick=\"delete_menu_item(this)\">X</span>" +
-				"<li>" +
-					"<div class=\"field\">" +
-						"<label for=\"stores\" class=\"required\"><em>*</em>Item Name</label>" +
-						"<div class=\"input-box\">" +
-							"<input type='text' name='item_name[]' class='input-text required-entry' />" +
-						"</div>" +
-					"</div>" +
-				"</li>" +
-				
-				"<li>" +
-					"<div class=\"field\">" +
-						"<label for=\"stores\" class=\"required\"><em>*</em>Price</label>" +
-						"<div class=\"input-box\">" +
-							"<input type='text' name='item_price[]' class='input-text required-entry' />" +
-						"</div>" +
-					"</div>" +
-				"</li>" +
-				   
-				"<li>" +
-					"<div class=\"field\">" +
-						"<div class=\"upload-head\">" +
-							"<label for=\"image\" class=\"required\"></label>" +
-						"</div>" +
-						"<div class=\"input-box\">" +
-							"<input type=\"file\" id=\"item_image\" name=\"item_image[]\"  title=\"Image\" class=\"input-text required-entry\" />" +
-						"</div>" +
-					"</div>" +
-				"</li>";
+	var new_item_html ="<span class='delete_menu_item' onClick=\"delete_menu_item(this)\">X</span>" +
+		"<li>" +
+			"<div class=\"field\">" +
+				"<label for=\"stores\" class=\"required\"><em>*</em>Item Name</label>" +
+				"<div class=\"input-box\">" +
+					"<input type='text' name='item_name[]' class='input-text required-entry' />" +
+				"</div>" +
+			"</div>" +
+		"</li>" +
+		
+		"<li>" +
+			"<div class=\"field\">" +
+				"<label for=\"stores\" class=\"required\"><em>*</em>Price</label>" +
+				"<div class=\"input-box\">" +
+					"<input type='text' name='item_price[]' class='input-text required-entry' />" +
+				"</div>" +
+			"</div>" +
+		"</li>" +
+		
+		"<li>" +
+			"<div class=\"field\">" +
+				"<div class=\"upload-head\">" +
+					"<label for=\"image\" class=\"required\"></label>" +
+				"</div>" +
+				"<div class=\"input-box\">" +
+					"<input type=\"file\" id=\"item_image\" name=\"item_image[]\"  title=\"Image\" class=\"input-text required-entry\" />" +
+				"</div>" +
+			"</div>" +
+		"</li>";
 	
 	var div = document.createElement("div");
 	div.className = "menu_item";

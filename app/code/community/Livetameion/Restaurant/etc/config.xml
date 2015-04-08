@@ -12,7 +12,7 @@
  * To: Support_Magento@cybage.com.  We will send you a copy of the source file.
  *
  * @category   Marketplace Plugin
- * @package    Livetameion_Advertizement
+ * @package    Livetameion_Restaurant
  * @copyright  Copyright (c) 2014 Cybage Software Pvt. Ltd., India
  *             http://www.cybage.com/pages/centers-of-excellence/ecommerce/ecommerce.aspx
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
@@ -21,9 +21,9 @@
 -->
 <config>
     <modules>
-        <Livetameion_Advertizement>
+        <Livetameion_Restaurant>
             <version>0.1.0</version>
-        </Livetameion_Advertizement>
+        </Livetameion_Restaurant>
     </modules>
    <!-- <default>
         <advertizement_catalog>
@@ -44,27 +44,32 @@
     </default>-->
     <global>
 		<blocks>
-            <advertizement>
-                <class>Livetameion_Advertizement_Block</class>
-            </advertizement>            
-        </blocks>
-       <models>
             <restaurant>
-                <class>Livetameion_Advertizement_Model</class>
-                <resourceModel>advertizement_resource</resourceModel>
+                <class>Livetameion_Restaurant_Block</class>
+            </restaurant>            
+        </blocks>
+		<models>
+			<!-- The following <restaurant> model tag is used in Mage::getModel('model_name/entity_name') -->
+			<!-- So, in this case, we will use Mage::getModel('restaurant/entity_name') -->
+            <restaurant>
+                <class>Livetameion_Restaurant_Model</class>
+                <resourceModel>restaurant_resource</resourceModel>
             </restaurant>
 			
-            <advertizement_resource>
-                <class>Livetameion_Advertizement_Model_Resource</class>                               
-                <entities>                    
-                    <advertizement>
+            <restaurant_resource>
+                <class>Livetameion_Restaurant_Model_Resource</class>                               
+                <entities>
+					<!-- The following <menu> model tag is used in Mage::getModel('model_name/entity_name') -->
+					<!-- So, in this case, we will use Mage::getModel('model_name/menu') and so for all entities defined in entities tag -->
+					<!-- Also the model class name for entity in Model folder should be the as same as entity name -->
+                    <menu>
                         <table>restaurant_menu</table>
-                    </advertizement>
+                    </menu>
 					<item>
                         <table>restaurant_menu_item</table>
                     </item>
                 </entities>                
-            </advertizement_resource>
+            </restaurant_resource>
           <!-- <customer_resource>
                 <rewrite>
                     <customer>Livetameion_Advertizement_Model_Resource_Customer</customer>
@@ -76,35 +81,36 @@
                 </rewrite>
             </sales>
         </models>
-      <resources>
-            <advertizement_setup>
+		<resources>
+            <restaurant_setup>
                 <setup>
-                    <module>Livetameion_Advertizement</module>
+                    <module>Livetameion_Restaurant</module>
                     <class>Mage_Catalog_Model_Resource_Setup</class>
                 </setup>
-            </advertizement_setup>
+            </restaurant_setup>
         </resources>
         <helpers>
-            <advertizement>
-                <class>Livetameion_Advertizement_Helper</class>
-            </advertizement>
+			<!-- The following <restaurant> helper tag is used in Mage::helper('restaurant') -->
+            <restaurant>
+                <class>Livetameion_Restaurant_Helper</class>
+            </restaurant>
         </helpers>
     </global>
     <frontend>
         <routers>
-            <livetameion_advertizement>
+            <livetameion_restaurant>
                 <use>standard</use>
                 <args>
-                    <module>Livetameion_Advertizement</module>
+                    <module>Livetameion_Restaurant</module>
                     <frontName>restaurant</frontName>
                 </args>
-            </livetameion_advertizement>
+            </livetameion_restaurant>
         </routers>
         <layout>
             <updates>
-                <advertizement>
-                    <file>livetameion_advertizement.xml</file>
-                </advertizement>
+                <restaurant>
+                    <file>livetameion_restaurant.xml</file>
+                </restaurant>
             </updates>
         </layout>
     </frontend>

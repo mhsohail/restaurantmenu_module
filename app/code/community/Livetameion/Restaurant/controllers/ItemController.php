@@ -1,5 +1,5 @@
 <?php
-class Livetameion_Advertizement_ItemController extends Mage_Core_Controller_Front_Action {
+class Livetameion_Restaurant_ItemController extends Mage_Core_Controller_Front_Action {
 
 /**
      *    Create session 
@@ -18,7 +18,7 @@ class Livetameion_Advertizement_ItemController extends Mage_Core_Controller_Fron
             $session->setBeforeAuthUrl(Mage::helper('core/url')->getCurrentUrl());
             $this->_redirect('customer/account/login/');
             return $this;
-        }elseif(!Mage::helper('advertizement')->isMarketplaceActiveSellar()){
+        }elseif(!Mage::helper('restaurant')->isMarketplaceActiveSellar()){
             $this->_redirect('customer/account/');
         }
     }
@@ -253,7 +253,7 @@ class Livetameion_Advertizement_ItemController extends Mage_Core_Controller_Fron
 			$arrcustData = array('active_status'=>'0');
 		}
 		
-		$model = Mage::getModel('restaurant/advertizement')->load($id)->addData($arrcustData );  
+		$model = Mage::getModel('restaurant/menu')->load($id)->addData($arrcustData );  
 		try {
 			$model->setId($id)->save();
 			//echo "Data deleted successfully.";

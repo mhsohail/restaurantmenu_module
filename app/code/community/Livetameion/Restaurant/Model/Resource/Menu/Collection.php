@@ -1,6 +1,6 @@
 <?php
 /**
- * Livetameion Advertizement Plugin
+ * Livetameion Restaurant Plugin
  *
  * NOTICE OF LICENSE
  *
@@ -10,16 +10,16 @@
  * If you are unable to access it on the World Wide Web, please send an email
  * To: javed.alam@cwsinfotech.com.  We will send you a copy of the source file.
  *
- * @category   Advertizement Plugin
- * @package    Livetameion_Advertizement
+ * @category   Restaurant Plugin
+ * @package    Livetameion_Restaurant
  * @copyright  Copyright (c) 2014 Livetameion Technology Pvt. Ltd., India
  *             http://www.cwstechnology.com
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @author     Javed Alam <javed.alam@cwsinfotech.com>
  */
 
-class Livetameion_Advertizement_Model_Resource_Advertizement extends Mage_Core_Model_Resource_Db_Abstract {
+class Livetameion_Restaurant_Model_Resource_Menu_Collection extends Mage_Core_Model_Resource_Db_Collection_Abstract {
 	protected function _construct() {
-		$this->_init('restaurant/advertizement','restaurantmenu_id');
-	}
+		$this->_init('restaurant/menu');
+    }
 }

@@ -1,12 +1,12 @@
 <?php
-class Livetameion_Advertizement_Block_Advertizement extends Mage_Core_Block_Template {
+class Livetameion_Restaurant_Block_Advertizement extends Mage_Core_Block_Template {
 	
 	/*public function __construct() {
 		parent::__construct();
-		$collection = Mage::getModel('restaurant/advertizement')->getCollection();
+		$collection = Mage::getModel('restaurant/menu')->getCollection();
 		$this->setCollection($collection);
 	}
-
+	
 	protected function _prepareLayout()
 	{
 		parent::_prepareLayout();
@@ -27,12 +27,12 @@ class Livetameion_Advertizement_Block_Advertizement extends Mage_Core_Block_Temp
 		parent::__construct();   
 			$loggedUser = Mage::getSingleton( 'customer/session', array('name' => 'frontend') );
             $customer = $loggedUser->getCustomer();
-          $customerId=$customer->getId();
+			$customerId=$customer->getId();
             
-          //$customerId = Mage::getSingleton('customer/session')->getCustomerId();
-         //exit;
-        $collection = Mage::getModel('restaurant/advertizement')->getCollection()->addFieldToFilter('merchant_id', $customerId);
-        $this->setCollection($collection);
+			//$customerId = Mage::getSingleton('customer/session')->getCustomerId();
+			//exit;
+			$collection = Mage::getModel('restaurant/menu')->getCollection()->addFieldToFilter('merchant_id', $customerId);
+			$this->setCollection($collection);
     }
  
     protected function _prepareLayout()
@@ -70,7 +70,7 @@ class Livetameion_Advertizement_Block_Advertizement extends Mage_Core_Block_Temp
         return 'restaurantmenu_id';
     }
     public function getToolbarBlock() {
-        $block = $this->getLayout()->createBlock('advertizement/toolbar', microtime());
+        $block = $this->getLayout()->createBlock('restaurant/toolbar', microtime());
         return $block;
     }
     public function getMode()
