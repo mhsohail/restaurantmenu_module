@@ -26,21 +26,21 @@
         </Livetameion_Restaurant>
     </modules>
    <!-- <default>
-        <advertizement_catalog>
-            <advertizement_presentation>
+        <restaurant_catalog>
+            <restaurant_presentation>
                 <account_page_label>My Supplier Frontend Product Uploader Panel</account_page_label>
                 <show_header>0</show_header>
                 <show_footer>0</show_footer>
                 <include_jquery>1</include_jquery>
-            </advertizement_presentation>
-        </advertizement_catalog>
-        <advertizement_products>
-            <advertizement_catalog_config>
+            </restaurant_presentation>
+        </restaurant_catalog>
+        <restaurant_products>
+            <restaurant_catalog_config>
                 <sku_schema>100001</sku_schema>
                 <tax_class_id>0</tax_class_id>
                 <images_count>3</images_count>
-            </advertizement_catalog_config>
-        </advertizement_products>
+            </restaurant_catalog_config>
+        </restaurant_products>
     </default>-->
     <global>
 		<blocks>
@@ -72,12 +72,12 @@
             </restaurant_resource>
           <!-- <customer_resource>
                 <rewrite>
-                    <customer>Livetameion_Advertizement_Model_Resource_Customer</customer>
+                    <customer>Livetameion_Restaurant_Model_Resource_Customer</customer>
                 </rewrite>
             </customer_resource> -->
             <sales>
                 <rewrite>
-                    <!--<order>Livetameion_Advertizement_Model_Order</order>-->
+                    <!--<order>Livetameion_Restaurant_Model_Order</order>-->
                 </rewrite>
             </sales>
         </models>

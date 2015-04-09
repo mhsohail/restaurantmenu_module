@@ -142,7 +142,7 @@ class Livetameion_Restaurant_ItemController extends Mage_Core_Controller_Front_A
 					// setAllowRenameFiles(true) -> move your file directly in the $path folder
 					$uploader->setFilesDispersion(false);
 					
-					$path = Mage::getBaseDir('media') . DS."advertizement/" ;
+					$path = Mage::getBaseDir('media') . DS."restaurant_menu/" ;
 					$uplaoedFilename=$new_file_name.$_FILES['item_image']['name'][$i];
 					$uploader->save($path, $new_file_name.$_FILES['item_image']['name'][$i]);
 					//$uploader->save($path, $new_file_name);
@@ -190,7 +190,7 @@ class Livetameion_Restaurant_ItemController extends Mage_Core_Controller_Front_A
 				// setAllowRenameFiles(true) -> move your file directly in the $path folder
 				$uploader->setFilesDispersion(false);
 				
-				$path = Mage::getBaseDir('media') . DS."advertizement/";
+				$path = Mage::getBaseDir('media') . DS."restaurant_menu/";
 				$uplaoedFilename=$new_file_name.$_FILES['item_image']['name'];
 				$uploader->save($path, $new_file_name.$_FILES['item_image']['name']);
 				//$uploader->save($path, $new_file_name);

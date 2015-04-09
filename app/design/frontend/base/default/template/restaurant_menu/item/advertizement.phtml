@@ -19,16 +19,16 @@
 	color: #fff !important;
 }
 </style>
-<?php $getStoreData= Mage::helper('advertizement')->getStoreData();
-$getAllCategoriesDATA= Mage::helper('advertizement')->getAllCategoriesDATA();
+<?php $getStoreData= Mage::helper('restaurant')->getStoreData();
+$getAllCategoriesDATA= Mage::helper('restaurant')->getAllCategoriesDATA();
 //print_r($getAllCategoriesDATA);?>
 <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
 <?php //$collection = $this->getCollection(); ?>
-<?php $collection = Mage::getModel('advertizement/item')->getCollection(); ?>
+<?php $collection = Mage::getModel('restaurant/item')->getCollection(); ?>
 
 <div class="page-title adverizent">
 	<h1><?php echo $this->__('Menu Items') ?></h1>
-	<a href="<?php echo $this->getUrl('advertizement/index/add') ?>" class="common-orange-button"><?php echo $this->__('Add Item') ?></a><div class="clear"></div>
+	<a href="<?php echo $this->getUrl('restaurant/index/add') ?>" class="common-orange-button"><?php echo $this->__('Add Item') ?></a><div class="clear"></div>
 </div>
 <div style="clear:both"></div>
 <?php echo $this->getToolbarHtml(); ?>
@@ -50,7 +50,7 @@ $getAllCategoriesDATA= Mage::helper('advertizement')->getAllCategoriesDATA();
 		</thead>
 		<tbody>
 			<?php $_odd = '';
-			$path = Mage::getBaseUrl('media') ."advertizement/" ;
+			$path = Mage::getBaseUrl('media') ."restaurant_menu/" ;
 			 ?>
 			<?php foreach ($collection as $_obj): ?>
 				<tr>
@@ -58,8 +58,8 @@ $getAllCategoriesDATA= Mage::helper('advertizement')->getAllCategoriesDATA();
 					<td><span class="nobr"><img src="<?php echo $path.$_obj->getItemImage(); ?>" width="120"></span></td>
 					<td><?php echo $this->formatDate($_obj->getCreatedTime()) ?></td>
 					<td>
-						<a href="<?php echo $this->getUrl('advertizement/index/delete', array('id' => $_obj->getItemId())) ?>"><?php echo $this->__('Delete') ?></a>
-						<a href="<?php echo $this->getUrl('advertizement/index/edit', array('id' => $_obj->getItemId())) ?>"><?php echo $this->__(' / Edit') ?></a>
+						<a href="<?php echo $this->getUrl('restaurant/index/delete', array('id' => $_obj->getItemId())) ?>"><?php echo $this->__('Delete') ?></a>
+						<a href="<?php echo $this->getUrl('restaurant/index/edit', array('id' => $_obj->getItemId())) ?>"><?php echo $this->__(' / Edit') ?></a>
 					</td>
 				</tr>
 			<?php endforeach; ?>

@@ -24,7 +24,7 @@
 				<title>Restaurant Menu</title>
 			</action>
 			<!-- the above code works well. the following code shows the following error message,
-			when we visit the link http://localhost/clikaroo/index.php/advertizement/ from customer dashboard
+			when we visit the link http://localhost/clikaroo/index.php/restaurant/ from customer dashboard
 			so i commented it i think, the below code wants to communicate with another module called marketplace
 			-->
 			<!--
@@ -37,9 +37,9 @@
 			-->
         </reference>
 		<reference name="content">
-			<!-- <block type="advertizement/navbar" name="advertizement_nav" template="/advertizement/nav1.phtml"/> -->
-			<block type="restaurant/menu" name="advertizement_advertizement" template="restaurant_menu/advertizement/advertizement.phtml" />
-			<!--    <block type="advertizement/collection" name="advertizement_collection" template="advertizement/collection.phtml"/>-->
+			<!-- <block type="restaurant/navbar" name="restaurant_nav" template="/restaurant/nav1.phtml"/> -->
+			<block type="restaurant/menu" name="restaurant_menu" template="restaurant_menu/menu/menu.phtml" />
+			<!--    <block type="restaurant/collection" name="restaurant_collection" template="restaurant/collection.phtml"/>-->
         </reference>
 		<!--    <reference name="content">
             <block type="supplierfrontendproductuploader/navbar" name="supplierfrontendproductuploader_nav1" template="/supplierfrontendproductuploader/nav1.phtml"/>
@@ -60,7 +60,7 @@
 				<title>Restaurant Menu</title>
 			</action>
 			<!-- the above code works well. the following code shows the following error message,
-			when we visit the link http://localhost/clikaroo/index.php/advertizement/ from customer dashboard
+			when we visit the link http://localhost/clikaroo/index.php/restaurant/ from customer dashboard
 			so i commented it i think, the below code wants to communicate with another module called marketplace
 			-->
 			<!--
@@ -73,9 +73,9 @@
 			-->
         </reference>
 		<reference name="content">
-			<!-- <block type="advertizement/navbar" name="advertizement_nav" template="/advertizement/nav1.phtml"/> -->
-		<block type="restaurant/advertizement" name="advertizement_advertizement" template="restaurant_menu/advertizement/show.phtml"/>
-			<!--    <block type="advertizement/collection" name="advertizement_collection" template="advertizement/collection.phtml"/>-->
+			<!-- <block type="restaurant/navbar" name="restaurant_nav" template="/restaurant/nav1.phtml"/> -->
+		<block type="restaurant/menu" name="restaurant_menu" template="restaurant_menu/menu/show.phtml"/>
+			<!--    <block type="restaurant/collection" name="restaurant_collection" template="restaurant/collection.phtml"/>-->
         </reference>
 		<!--    <reference name="content">
             <block type="supplierfrontendproductuploader/navbar" name="supplierfrontendproductuploader_nav1" template="/supplierfrontendproductuploader/nav1.phtml"/>
@@ -93,7 +93,7 @@
             </action>
 			
 			<!-- the above code works well. the following code shows the following error message,
-			when we visit the link http://localhost/clikaroo/index.php/advertizement/index/add/ from customer dashboard
+			when we visit the link http://localhost/clikaroo/index.php/restaurant/index/add/ from customer dashboard
 			so i commented it i think, the below code wants to communicate with another module called marketplace
 			-->
 			<!--
@@ -110,7 +110,7 @@
         </action>   
         <update handle="customer_account"/>
 		<reference name="content">
-			<block type="restaurant/add" name="advertizement_add" template="restaurant_menu/advertizement/add.phtml"/>              
+			<block type="restaurant/add" name="restaurant_add" template="restaurant_menu/menu/add.phtml"/>              
         </reference>
     </livetameion_restaurant_index_add>
 	
@@ -124,7 +124,7 @@
             </action>
 			
 			<!-- the above code works well. the following code shows the following error message,
-			when we visit the link http://localhost/clikaroo/index.php/advertizement/index/add/ from customer dashboard
+			when we visit the link http://localhost/clikaroo/index.php/restaurant/index/add/ from customer dashboard
 			so i commented it i think, the below code wants to communicate with another module called marketplace
 			-->
 			<!--
@@ -141,7 +141,7 @@
         </action>   
         <update handle="customer_account"/>
        <reference name="content">            
-        <block type="restaurant/edit" name="advertizement_edit" template="restaurant_menu/advertizement/edit.phtml"/>              
+        <block type="restaurant/edit" name="restaurant_edit" template="restaurant_menu/menu/edit.phtml"/>              
         </reference>
     </livetameion_restaurant_index_edit>
 	
@@ -157,7 +157,7 @@
 				<title>Menu Item</title>
 			</action>
 			<!-- the above code works well. the following code shows the following error message,
-			when we visit the link http://localhost/clikaroo/index.php/advertizement/ from customer dashboard
+			when we visit the link http://localhost/clikaroo/index.php/restaurant/ from customer dashboard
 			so i commented it i think, the below code wants to communicate with another module called marketplace
 			-->
 			<!--
@@ -170,9 +170,9 @@
 			-->
         </reference>
 		<reference name="content">
-			<!-- <block type="advertizement/navbar" name="advertizement_nav" template="/advertizement/nav1.phtml"/> -->
-		<block type="restaurant/advertizement" name="advertizement_advertizement" template="advertizement/advertizement.phtml"/>
-			<!--    <block type="advertizement/collection" name="advertizement_collection" template="advertizement/collection.phtml"/>-->
+			<!-- <block type="restaurant/navbar" name="restaurant_nav" template="/restaurant/nav1.phtml"/> -->
+		<block type="restaurant/item" name="restaurant_item" template="restaurant_menu/menu/menu.phtml"/>
+			<!--    <block type="restaurant/collection" name="restaurant_collection" template="restaurant/collection.phtml"/>-->
         </reference>
 		<!--    <reference name="content">
             <block type="supplierfrontendproductuploader/navbar" name="supplierfrontendproductuploader_nav1" template="/supplierfrontendproductuploader/nav1.phtml"/>
@@ -190,7 +190,7 @@
             </action>
 			
 			<!-- the above code works well. the following code shows the following error message,
-			when we visit the link http://localhost/clikaroo/index.php/advertizement/index/add/ from customer dashboard
+			when we visit the link http://localhost/clikaroo/index.php/restaurant/index/add/ from customer dashboard
 			so i commented it i think, the below code wants to communicate with another module called marketplace
 			-->
 			<!--
@@ -207,7 +207,7 @@
         </action>   
         <update handle="customer_account"/>
 		<reference name="content">
-			<block type="restaurant/add" name="advertizement_add" template="restaurant_menu/item/add.phtml"/>
+			<block type="restaurant/add" name="restaurant_add" template="restaurant_menu/item/add.phtml"/>
         </reference>
     </livetameion_restaurant_item_add>
 	
@@ -221,7 +221,7 @@
             </action>
 			
 			<!-- the above code works well. the following code shows the following error message,
-			when we visit the link http://localhost/clikaroo/index.php/advertizement/index/add/ from customer dashboard
+			when we visit the link http://localhost/clikaroo/index.php/restaurant/index/add/ from customer dashboard
 			so i commented it i think, the below code wants to communicate with another module called marketplace
 			-->
 			<!--
@@ -238,7 +238,7 @@
         </action>   
         <update handle="customer_account"/>
 		<reference name="content">
-			<block type="restaurant/edit" name="advertizement_edit" template="restaurant_menu/item/edit.phtml"/>
+			<block type="restaurant/edit" name="item_edit" template="restaurant_menu/item/edit.phtml"/>
         </reference>
     </livetameion_restaurant_item_edit>
 	
