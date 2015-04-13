@@ -42,6 +42,26 @@
 				
 				<li>
 					<div class="field">
+						<label for="category" class="required"><em>*</em><?php echo $this->__('Category') ?></label>
+						<div class="input-box">
+							<select name='category[]' class='input-text required-entry'>
+								<option>APPETIZERS & TAPAS</option>
+								<option>WOOD-FIRE SIGNATURES</option>
+								<option>SOUPS</option>
+								<option>PIZZA</option>
+								<option>SANDWICHES</option>
+								<option>PASTA</option>
+								<option>SEAFOOD</option>
+								<option>SIDES</option>
+								<option>DESSERTS</option>
+								<option>BEVERAGES</option>
+							</select>
+						</div>
+					</div>			
+				</li>
+				
+				<li>
+					<div class="field">
 						<div class="upload-head">
 							<label for="image" class="required"><?php echo $this->__('Upload Image') ?></label>
 						</div>

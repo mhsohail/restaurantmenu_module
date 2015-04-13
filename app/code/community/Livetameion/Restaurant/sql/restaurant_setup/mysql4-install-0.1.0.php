@@ -46,7 +46,7 @@ CREATE TABLE {$this->getTable('restaurant/menu')} (
 ENGINE = InnoDB;"
 );
 
-$installer->run("    
+$installer->run("
 -- DROP TABLE IF EXISTS {$this->getTable('restaurant/item')};
 CREATE TABLE {$this->getTable('restaurant/item')} (
 	`item_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -54,6 +54,7 @@ CREATE TABLE {$this->getTable('restaurant/item')} (
 	`name` varchar(255) NOT NULL,
 	`image` varchar(255) NOT NULL,
 	`price` int(11) NOT NULL,
+	`category` varchar(255) NOT NULL,
 	`createddate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	`modifieddate` datetime NOT NULL,
 	PRIMARY KEY (`item_id`)

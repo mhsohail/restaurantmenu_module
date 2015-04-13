@@ -68,7 +68,7 @@
 					<item>
                         <table>restaurant_menu_item</table>
                     </item>
-                </entities>                
+                </entities>
             </restaurant_resource>
           <!-- <customer_resource>
                 <rewrite>
