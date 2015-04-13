@@ -19,7 +19,15 @@
 	color: #fff !important;
 }
 </style>
-<?php $getStoreData= Mage::helper('restaurant')->getStoreData();
+<?php
+
+echo "<pre>";
+$items = Mage::helper('restaurant')->getMenuItemsFor(1);
+foreach($items as $item) {
+	print_r($item->getData());
+}
+exit;
+$getStoreData= Mage::helper('restaurant')->getStoreData();
 $getAllCategoriesDATA= Mage::helper('restaurant')->getAllCategoriesDATA();
 //print_r($getAllCategoriesDATA);?>
 <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>

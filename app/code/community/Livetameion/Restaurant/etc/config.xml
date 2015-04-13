@@ -78,7 +78,7 @@
             <sales>
                 <rewrite>
                     <!--<order>Livetameion_Restaurant_Model_Order</order>-->
-				</rewrite>
+                </rewrite>
             </sales>
         </models>
 		<resources>
@@ -98,13 +98,13 @@
     </global>
     <frontend>
         <routers>
-            <restaurant>
+            <livetameion_restaurant>
                 <use>standard</use>
                 <args>
                     <module>Livetameion_Restaurant</module>
                     <frontName>restaurant</frontName>
                 </args>
-            </restaurant>
+            </livetameion_restaurant>
         </routers>
         <layout>
             <updates>

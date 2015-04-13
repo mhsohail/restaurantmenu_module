@@ -5,9 +5,9 @@ class Livetameion_Restaurant_ItemController extends Mage_Core_Controller_Front_A
      *    Create session 
      * */
     protected function _getSession() {
-		return Mage::getSingleton('restaurant/session');
+        return Mage::getSingleton('restaurant/session');
     }
-	
+
 	/**
      *    validate Customer Login and redirect previous page 
      * */
@@ -29,7 +29,6 @@ class Livetameion_Restaurant_ItemController extends Mage_Core_Controller_Front_A
 		$this->_initLayoutMessages('restaurant/session');  
 		$this->renderLayout();
 	}
-	
     public function addAction() {
 		$this->_validateCustomerLogin();
 		$this->loadLayout();

@@ -243,7 +243,7 @@
         </reference>
     </livetameion_restaurant_item_edit>
 	
-	<livetameion_restaurant_menu_show>
+	<livetameion_restaurant_cmenu_show>
 		<remove name="right" />
 		<remove name="left" />
 		<action method="setTemplate">
@@ -277,6 +277,6 @@
             <block type="supplierfrontendproductuploader/dashboard" name="supplierfrontendproductuploader_dashboard1"
                    template="supplierfrontendproductuploader/dashboard1.phtml"/>
 		</reference>-->
-	</livetameion_restaurant_menu_show>
+	</livetameion_restaurant_cmenu_show>
 	
 </layout>
