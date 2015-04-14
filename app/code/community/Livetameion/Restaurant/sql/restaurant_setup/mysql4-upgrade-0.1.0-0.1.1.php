@@ -34,31 +34,9 @@ so in this case, it should be getTable('module_alias/menu') or getTable('module_
 
 $installer = $this;
 $installer->startSetup();
-$installer->run("    
--- DROP TABLE IF EXISTS {$this->getTable('restaurant/menu')};
-CREATE TABLE {$this->getTable('restaurant/menu')} (
-	`restaurantmenu_id` int(11) NOT NULL AUTO_INCREMENT,
-	`merchant_id` int(11) NOT NULL,
-	`createddate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-	`modifieddate` datetime NOT NULL,
-	PRIMARY KEY (`restaurantmenu_id`)
-)
-ENGINE = InnoDB;"
-);
 
-$installer->run("    
--- DROP TABLE IF EXISTS {$this->getTable('restaurant/item')};
-CREATE TABLE {$this->getTable('restaurant/item')} (
-	`item_id` int(11) NOT NULL AUTO_INCREMENT,
-	`restaurantmenu_id` int(11) NOT NULL,
-	`name` varchar(255) NOT NULL,
-	`image` varchar(255) NOT NULL,
-	`price` int(11) NOT NULL,
-	`createddate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-	`modifieddate` datetime NOT NULL,
-	PRIMARY KEY (`item_id`)
-)
-ENGINE = InnoDB;"
-);
+$installer->run("
+	ALTER TABLE {$this->getTable('restaurant/item')}
+	ADD COLUMN `category` VARCHAR(255) NOT NULL AFTER `price`;");
 
 $installer->endSetup();
