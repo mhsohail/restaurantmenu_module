@@ -23,11 +23,10 @@
 
 //echo "<pre>";
 $menu_id = $this->getRequest()->getParam("id");
-$cat_id = $this->getRequest()->getParam("catid");
 if(isset($menu_id) && !empty($menu_id)) {
 	$items = Mage::helper('restaurant')->getMenuItemsFor($menu_id);
 	foreach($items as $item) {
-		print_r($item->getData());
+		//print_r($item->getData());
 	}
 	
 	?>
@@ -1266,176 +1265,181 @@ if(isset($menu_id) && !empty($menu_id)) {
 							</td>
 						</tr>
 						 
-									  <tr>
+									<tr>
 										<td align="left" class="border_bottom3 menu_nagivation_rows">
-										<table width="100%">
-											<tr>
-																								<td valign="middle" width="25%">
-														<a href="menu_display4fa2.html?categoryid=38451404080124&amp;categoryname=APPETIZERS%20&amp;%20TAPAS">
-														<img src="https://www.onlineorderingdemo.com/category_images/3845.png" width="70" height="70" align="absmiddle" /></a>
+											<table width="100%">
+												<tr>
+													<td valign="middle" width="25%">
+														<a href="<?php echo $this->getUrl('restaurant/cmenu/show', array('id' => $this->getRequest()->getParam('id'), 'catid'=>'APPETIZERS & TAPAS')) ?>">
+															<img src="https://www.onlineorderingdemo.com/category_images/3845.png" width="70" height="70" align="absmiddle" />
+														</a>
 													</td>
-												
+													
 													<td valign="middle" width="75%" style="line-height:15px;">
-														<a style="font-size:1em;" href="menu_display4fa2.html?categoryid=38451404080124&amp;categoryname=APPETIZERS%20&amp;%20TAPAS">APPETIZERS & TAPAS</a>                                                </td>
-																						</tr>
-	</table>
-										</td>
-									  </tr>
-									  
-														   
-									  <tr>
-										<td align="left" class="border_bottom3 menu_nagivation_rows">
-										<table width="100%">
-											<tr>
-																								<td valign="middle" width="25%">
-														<a href="menu_display1ec2.html?categoryid=38461404080125&amp;categoryname=WOOD-FIRE%20SIGNATURES">
-														<img src="https://www.onlineorderingdemo.com/category_images/3846.png" width="70" height="70" align="absmiddle" /></a>
+														<a style="font-size:1em;" href="<?php echo $this->getUrl('restaurant/cmenu/show', array('id' => $this->getRequest()->getParam('id'), 'catid'=>'APPETIZERS & TAPAS')) ?>">APPETIZERS & TAPAS</a>
 													</td>
-												
-													<td valign="middle" width="75%" style="line-height:15px;">
-														<a style="font-size:1em;" href="menu_display1ec2.html?categoryid=38461404080125&amp;categoryname=WOOD-FIRE%20SIGNATURES">WOOD-FIRE SIGNATURES</a>                                                </td>
-																						</tr>
-	</table>
+												</tr>
+											</table>
 										</td>
-									  </tr>
-									  
-														   
-									  <tr>
+									</tr>
+									
+									<tr>
 										<td align="left" class="border_bottom3 menu_nagivation_rows">
-										<table width="100%">
-											<tr>
-																								<td valign="middle" width="25%">
-														<a href="menu_display65b7.html?categoryid=38431404080125&amp;categoryname=SOUPS">
+											<table width="100%">
+												<tr>
+													<td valign="middle" width="25%">
+														<a href="<?php echo $this->getUrl('restaurant/cmenu/show', array('id' => $this->getRequest()->getParam('id'), 'catid'=>'WOOD-FIRE SIGNATURES')) ?>">
+															<img src="https://www.onlineorderingdemo.com/category_images/3846.png" width="70" height="70" align="absmiddle" />
+														</a>
+													</td>
+													
+													<td valign="middle" width="75%" style="line-height:15px;">
+														<a style="font-size:1em;" href="<?php echo $this->getUrl('restaurant/cmenu/show', array('id' => $this->getRequest()->getParam('id'), 'catid'=>'WOOD-FIRE SIGNATURES')) ?>">WOOD-FIRE SIGNATURES</a></td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									
+									<tr>
+										<td align="left" class="border_bottom3 menu_nagivation_rows">
+											<table width="100%">
+												<tr>
+													<td valign="middle" width="25%">
+														<a href="<?php echo $this->getUrl('restaurant/cmenu/show', array('id' => $this->getRequest()->getParam('id'), 'catid'=>'SOUPS')) ?>">
 														<img src="https://www.onlineorderingdemo.com/category_images/3843.png" width="70" height="70" align="absmiddle" /></a>
 													</td>
-												
+													
 													<td valign="middle" width="75%" style="line-height:15px;">
-														<a style="font-size:1em;" href="menu_display65b7.html?categoryid=38431404080125&amp;categoryname=SOUPS">SOUPS</a>                                                </td>
-																						</tr>
-	</table>
+														<a style="font-size:1em;" href="<?php echo $this->getUrl('restaurant/cmenu/show', array('id' => $this->getRequest()->getParam('id'), 'catid'=>'SOUPS')) ?>">SOUPS</a>
+													</td>
+												</tr>
+											</table>
 										</td>
-									  </tr>
+									</tr>
 									  
 														   
-									  <tr>
+									<tr>
 										<td align="left" class="border_bottom3 menu_nagivation_rows">
-										<table width="100%">
-											<tr>
-																								<td valign="middle" width="25%">
-														<a href="menu_display8824.html?categoryid=38521404080125&amp;categoryname=PIZZA">
+											<table width="100%">
+												<tr>
+													<td valign="middle" width="25%">
+														<a href="<?php echo $this->getUrl('restaurant/cmenu/show', array('id' => $this->getRequest()->getParam('id'), 'catid'=>'PIZZA')) ?>">
 														<img src="https://www.onlineorderingdemo.com/category_images/3852.png" width="70" height="70" align="absmiddle" /></a>
 													</td>
 												
 													<td valign="middle" width="75%" style="line-height:15px;">
-														<a style="font-size:1em;" href="menu_display8824.html?categoryid=38521404080125&amp;categoryname=PIZZA">PIZZA</a>                                                </td>
-																						</tr>
-	</table>
+														<a style="font-size:1em;" href="<?php echo $this->getUrl('restaurant/cmenu/show', array('id' => $this->getRequest()->getParam('id'), 'catid'=>'PIZZA')) ?>">PIZZA</a></td>
+												</tr>
+											</table>
 										</td>
-									  </tr>
-									  
-														   
-									  <tr>
+									</tr>
+									
+									<tr>
 										<td align="left" class="border_bottom3 menu_nagivation_rows">
-										<table width="100%">
-											<tr>
-																								<td valign="middle" width="25%">
-														<a href="menu_displayac76.html?categoryid=38491404080125&amp;categoryname=SANDWICHES">
+											<table width="100%">
+												<tr>
+													<td valign="middle" width="25%">
+														<a href="<?php echo $this->getUrl('restaurant/cmenu/show', array('id' => $this->getRequest()->getParam('id'), 'catid'=>'SANDWICHES')) ?>">
 														<img src="https://www.onlineorderingdemo.com/category_images/3849.png" width="70" height="70" align="absmiddle" /></a>
 													</td>
-												
+													
 													<td valign="middle" width="75%" style="line-height:15px;">
-														<a style="font-size:1em;" href="menu_displayac76.html?categoryid=38491404080125&amp;categoryname=SANDWICHES">SANDWICHES</a>                                                </td>
-																						</tr>
-	</table>
-										</td>
-									  </tr>
-									  
-														   
-									  <tr>
-										<td align="left" class="border_bottom3 menu_nagivation_rows">
-										<table width="100%">
-											<tr>
-																								<td valign="middle" width="25%">
-														<a href="menu_display8d7d.html?categoryid=38481404080125&amp;categoryname=PASTA">
-														<img src="https://www.onlineorderingdemo.com/category_images/3848.png" width="70" height="70" align="absmiddle" /></a>
+														<a style="font-size:1em;" href="<?php echo $this->getUrl('restaurant/cmenu/show', array('id' => $this->getRequest()->getParam('id'), 'catid'=>'SANDWICHES')) ?>">SANDWICHES</a>
 													</td>
-												
-													<td valign="middle" width="75%" style="line-height:15px;">
-														<a style="font-size:1em;" href="menu_display8d7d.html?categoryid=38481404080125&amp;categoryname=PASTA">PASTA</a>                                                </td>
-																						</tr>
-	</table>
+												</tr>
+											</table>
 										</td>
-									  </tr>
-									  
-														   
-									  <tr>
+									</tr>
+									
+									<tr>
 										<td align="left" class="border_bottom3 menu_nagivation_rows">
-										<table width="100%">
-											<tr>
-																								<td valign="middle" width="25%">
-														<a href="menu_display7cab.html?categoryid=38471404080125&amp;categoryname=SEAFOOD">
-														<img src="https://www.onlineorderingdemo.com/category_images/3847.png" width="70" height="70" align="absmiddle" /></a>
+											<table width="100%">
+												<tr>
+													<td valign="middle" width="25%">
+														<a href="<?php echo $this->getUrl('restaurant/cmenu/show', array('id' => $this->getRequest()->getParam('id'), 'catid'=>'PASTA')) ?>">
+															<img src="https://www.onlineorderingdemo.com/category_images/3848.png" width="70" height="70" align="absmiddle" />
+														</a>
 													</td>
-												
+													
 													<td valign="middle" width="75%" style="line-height:15px;">
-														<a style="font-size:1em;" href="menu_display7cab.html?categoryid=38471404080125&amp;categoryname=SEAFOOD">SEAFOOD</a>                                                </td>
-																						</tr>
-	</table>
-										</td>
-									  </tr>
-									  
-														   
-									  <tr>
-										<td align="left" class="border_bottom3 menu_nagivation_rows">
-										<table width="100%">
-											<tr>
-																								<td valign="middle" width="25%">
-														<a href="menu_displaye89e.html?categoryid=38511404080125&amp;categoryname=SIDES">
-														<img src="https://www.onlineorderingdemo.com/category_images/3851.png" width="70" height="70" align="absmiddle" /></a>
+														<a style="font-size:1em;" href="<?php echo $this->getUrl('restaurant/cmenu/show', array('id' => $this->getRequest()->getParam('id'), 'catid'=>'PASTA')) ?>">PASTA</a>
 													</td>
-												
-													<td valign="middle" width="75%" style="line-height:15px;">
-														<a style="font-size:1em;" href="menu_displaye89e.html?categoryid=38511404080125&amp;categoryname=SIDES">SIDES</a>                                                </td>
-																						</tr>
-	</table>
+												</tr>
+											</table>
 										</td>
-									  </tr>
-									  
+									</tr>
 														   
-									  <tr>
+									<tr>
 										<td align="left" class="border_bottom3 menu_nagivation_rows">
-										<table width="100%">
-											<tr>
-																								<td valign="middle" width="25%">
-														<a href="menu_display1f1b.html?categoryid=38531404080125&amp;categoryname=DESSERTS">
+											<table width="100%">
+												<tr>
+													<td valign="middle" width="25%">
+														<a href="<?php echo $this->getUrl('restaurant/cmenu/show', array('id' => $this->getRequest()->getParam('id'), 'catid'=>'SEAFOOD')) ?>">
+															<img src="https://www.onlineorderingdemo.com/category_images/3847.png" width="70" height="70" align="absmiddle" />
+														</a>
+													</td>
+													
+													<td valign="middle" width="75%" style="line-height:15px;">
+														<a style="font-size:1em;" href="<?php echo $this->getUrl('restaurant/cmenu/show', array('id' => $this->getRequest()->getParam('id'), 'catid'=>'SEAFOOD')) ?>">SEAFOOD</a>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+														   
+									<tr>
+										<td align="left" class="border_bottom3 menu_nagivation_rows">
+											<table width="100%">
+												<tr>
+													<td valign="middle" width="25%">
+														<a href="<?php echo $this->getUrl('restaurant/cmenu/show', array('id' => $this->getRequest()->getParam('id'), 'catid'=>'SIDES')) ?>">
+															<img src="https://www.onlineorderingdemo.com/category_images/3851.png" width="70" height="70" align="absmiddle" />
+														</a>
+													</td>
+													
+													<td valign="middle" width="75%" style="line-height:15px;">
+														<a style="font-size:1em;" href="<?php echo $this->getUrl('restaurant/cmenu/show', array('id' => $this->getRequest()->getParam('id'), 'catid'=>'SIDES')) ?>">SIDES</a>                                                </td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									
+									<tr>
+										<td align="left" class="border_bottom3 menu_nagivation_rows">
+											<table width="100%">
+												<tr>
+													<td valign="middle" width="25%">
+														<a href="<?php echo $this->getUrl('restaurant/cmenu/show', array('id' => $this->getRequest()->getParam('id'), 'catid'=>'DESSERTS')) ?>">
 														<img src="https://www.onlineorderingdemo.com/category_images/3853.png" width="70" height="70" align="absmiddle" /></a>
 													</td>
-												
+													
 													<td valign="middle" width="75%" style="line-height:15px;">
-														<a style="font-size:1em;" href="menu_display1f1b.html?categoryid=38531404080125&amp;categoryname=DESSERTS">DESSERTS</a>                                                </td>
-																						</tr>
-	</table>
-										</td>
-									  </tr>
-									  
-														   
-									  <tr>
-										<td align="left" class="border_bottom3 menu_nagivation_rows">
-										<table width="100%">
-											<tr>
-																								<td valign="middle" width="25%">
-														<a href="menu_display3609.html?categoryid=38541404080125&amp;categoryname=BEVERAGES">
-														<img src="https://www.onlineorderingdemo.com/category_images/3854.png" width="70" height="70" align="absmiddle" /></a>
+														<a style="font-size:1em;" href="<?php echo $this->getUrl('restaurant/cmenu/show', array('id' => $this->getRequest()->getParam('id'), 'catid'=>'DESSERTS')) ?>">DESSERTS</a>
 													</td>
-												
-													<td valign="middle" width="75%" style="line-height:15px;">
-														<a style="font-size:1em;" href="menu_display3609.html?categoryid=38541404080125&amp;categoryname=BEVERAGES">BEVERAGES</a>                                                </td>
-																						</tr>
-	</table>
+												</tr>
+											</table>
 										</td>
-									  </tr>
+									</tr>
+									
+									<tr>
+										<td align="left" class="border_bottom3 menu_nagivation_rows">
+											<table width="100%">
+												<tr>
+													<td valign="middle" width="25%">
+														<a href="<?php echo $this->getUrl('restaurant/cmenu/show', array('id' => $this->getRequest()->getParam('id'), 'catid'=>'BEVERAGES')) ?>">
+															<img src="https://www.onlineorderingdemo.com/category_images/3854.png" width="70" height="70" align="absmiddle" />
+														</a>
+													</td>
+													
+													<td valign="middle" width="75%" style="line-height:15px;">
+														<a style="font-size:1em;" href="<?php echo $this->getUrl('restaurant/cmenu/show', array('id' => $this->getRequest()->getParam('id'), 'catid'=>'BEVERAGES')) ?>">BEVERAGES</a>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
 									  
-													</table>
+						</table>
 					</div>
 				  </td>
 			  </tr>
@@ -1446,18 +1450,28 @@ if(isset($menu_id) && !empty($menu_id)) {
 					<table width="95%" border="0"  cellspacing="0" cellpadding="0">
 						<tr>
 							<td class="cu_inner_heading" align="left">
-								<div style="line-height:36px;font-size:15px;">
-									Fresh Local Bistro							</div>
+								<div style="line-height:36px;font-size:15px;">Fresh Local Bistro</div>
 							</td>
 						</tr>
-						<tr>	
-							<td colspan="2" align="left" bordercolor="#FFFFFF" class="">
-								<table width="100%" border="0">
-									<?php 
-									if(isset($cat_id) && !empty($cat_id)) {
-										echo "category id: " . $cat_id;
-									} else {
-										?>
+						
+						<?php
+						$cat_id = $this->getRequest()->getParam("catid");
+						if(isset($cat_id) && !empty($cat_id)) {
+							$items = Mage::getModel("restaurant/item")->getCollection()
+								->addFieldToFilter("restaurantmenu_id", $this->getRequest()->getParam('id'))
+								->addFieldToFilter("category", $this->getRequest()->getParam('catid'));
+							foreach($items as $item) {
+								echo "<pre>";
+								print_r($items->getData());
+								?>
+								
+								<?php
+							}
+						} else {
+							?>
+							<tr>
+								<td colspan="2" align="left" bordercolor="#FFFFFF" class="">
+									<table width="100%" border="0">
 										<tr>
 											<td width="70%" rowspan="4" class="cart_text_2">
 												<br />
@@ -1466,7 +1480,7 @@ if(isset($menu_id) && !empty($menu_id)) {
 														453 Lincoln St<br>Carlisle,&nbsp;PA&nbsp;17013<br><br>
 													<span style="margin-left: 38px;">8777876368</span>
 												</div>
-												  </td>
+											</td>
 											<td align="right">
 												<!--<div style="height:32px; line-height:32px;">
 													<a href="javascript:void(0)" onClick="javaScript:window.open('email_to_friend.php','','width=520, height=390,scrollbars=NO')">
@@ -1474,188 +1488,178 @@ if(isset($menu_id) && !empty($menu_id)) {
 													</a>
 												</div><br />
 												-->
-																						<div style="height:32px; line-height:32px;">
+												<div style="height:32px; line-height:32px;">
 													<span class="st_sharethis_custom" style="cursor:pointer"><a>Share Menu</a></span>
 													<div class="float_right icon_large sharethis"></div>
 												</div><br />
 												<div style="height:32px; line-height:32px;">
-																								<a href="javascript:void(0)" onClick="javaScript:window.open('menu_item_print.html','','width=600 ,height=800,scrollbars=1')">
-																										Print Menu												<div class="float_right icon_large print"></div>
+													<a href="javascript:void(0)" onClick="javaScript:window.open('menu_item_print.html','','width=600 ,height=800,scrollbars=1')">
+														Print Menu												<div class="float_right icon_large print"></div>
 													</a>
-																							</div>
+												</div>
 											</td>
 										</tr>
-										<?php 
-									} ?>
-								</table>
-							</td>
-						</tr>
-											<tr>
-							<td colspan="2" align="left" bordercolor="#FFFFFF" class="">
-								<table width="50%" border="0">
-									<tr>
-										<td width="50%" rowspan="4" class="cart_text_2">
-											<div class="ui-corner-all" style="border: 1px solid #b5b7b4; margin-top: 10px; display:block; position:relative; padding:15px;">
-												<img src="https://www.onlineorderingdemo.com/css/images/icons/arrow.png" style="float: left; padding: 5px; vertical-align: middle;" />
-												<strong>Choose a Menu Category to Begin Your Order</strong>
-											</div>
-										</td>
-									</tr>
-								</table>
-							</td>
-						</tr>
-											<tr>
-							<td colspan="2" align="left">&nbsp;</td>
-						</tr>
-						<tr>
-							<td colspan="2" align="left">&nbsp;</td>
-						</tr>
-						<tr>
-							<td align="center" id="errorMsgStr">
-									   
-		
-							</td>
-						</tr>
-											<tr>
-							<td colspan="2" align="left" class="border_bottom2">
-								<div class="float_left icon_small user"></div>
-								<span>About Us</span>
-							</td>
-						</tr>
-						<tr>
-							<td colspan="2" align="left" class="cart_text_2">Our team at Fresh Local Bistro are committed to providing comfort food in a comfortable environment. All of our ingredients are grown locally and we offer a broad assortment of fair trade products from around the world. Support your local economy and stop by today!
-	</td>
-						</tr>
-						<tr>
-							<td colspan="2" align="left">&nbsp;</td>
-						</tr>
-											<tr>
-							<td colspan="2" align="left" class="border_bottom2">
-								<div class="float_left icon_small info"></div>
-								<span>Order Information</span>
-							</td>
-						</tr>
-						<tr>
-							<td colspan="2" align="left">
-								<table width="100%"  border="0">
-									 
-									<tr>
-											
-											<td width="12%" class="border_dotted cart_text_2">Notice for Pickup/Dine-In:
-										</td>
-										<td width="29%" class="border_dotted cart_text_2">
-											<strong>
-											15 mins										</strong>
-										</td>
-									</tr>
-										
-																	<tr>
-										<td width="12%" class="border_dotted cart_text_2">Notice for Delivery:</td>
-										<td width="29%" class="border_dotted cart_text_2">
-											<strong>
-											30 mins										</strong>
-										</td>
-									</tr>
-																								  <tr>
-									<td width="12%" class="border_dotted cart_text_2">Min. Delivery Amount:</td>
-									<td class="border_dotted cart_text_2"><strong>$10.00</strong></td>
-								  </tr>
-								  
-								  <tr>
-									<td width="12%" class="border_dotted cart_text_2">Delivery Zones & Fees:</td>
-									<td class="border_dotted cart_text_2"><a href="get_map9a08.html?restaurant_id=385&amp;del_status=1" rel="ibox&width=1000&height=480" title="View" style="text-decoration:none"><b><u>View</u></b> <img src="https://www.onlineorderingdemo.com/images/info_icon.png" width="18" height="16"></a></td>
-								  </tr>
-								
-										
-								</table>               
-							</td>
-						</tr>
-						<tr>
-							<td colspan="2" align="left" valign="top">&nbsp;</td>
-						</tr>
-						<tr>
-							<td colspan="2" align="left" class="border_bottom2">
-								<div class="float_left icon_small money"></div><span>Accepted Payments Online</span>
-							</td>
-						</tr>
-						<tr>
-							<td colspan="2" align="left" class="border_dotted">
-														  <img src="https://www.onlineorderingdemo.com/images/99.png" width="45" height="28" vspace="5" class="tTip" title="We accept Cash" /> 
-													  <img src="https://www.onlineorderingdemo.com/images/15.png" width="45" height="28" vspace="5" class="tTip" title="We accept Visa"/> 
-														<img src="https://www.onlineorderingdemo.com/images/16.png" width="45" height="28" vspace="5" class="tTip" title="We accept MasterCard"/>
-													  <img src="https://www.onlineorderingdemo.com/images/17.png" width="45" height="28" vspace="5" class="tTip" title="We accept Discover"/> 
-														<img src="https://www.onlineorderingdemo.com/images/18.png" width="45" height="28" vspace="5" class="tTip" title="We accept American Express"/>
-															<span class="tTip" title="We accept House Account: 							Double click to add tooltip.										Please include your 14 digit house account number" ><img src="https://www.onlineorderingdemo.com/images/custompayment.png" width="45" height="28" vspace="5" /><b style="vertical-align: 15px;">House Account</b></span>&nbsp;
-								  
-							</td>
-						</tr>          
-					<!-- View working time -->			
-						<tr>
-							<td colspan="2" align="left">		
-								<div align="left">
-									<table border="0" align="left" cellpadding="2" cellspacing="0" width="100%" class="">
-										<tr>
-											<td colspan="3" align="left" class="border_bottom2">
-												<div class="float_left icon_small clock"></div><span>Store Hours</span>
-											</td>
-										</tr>
-																			<tr id="MONDAY">
-											<td align="left" class="cart_text_2" style="display:block;">
-												<strong>MONDAY</strong></td>
-											<td>&nbsp;</td>
-												
-											<td class="cart_text_2">10:00 AM - 3:00 PM</td>		
-																				</tr>
-																			<tr id="TUESDAY">
-											<td align="left" class="cart_text_2" style="display:block;">
-												<strong>TUESDAY</strong></td>
-											<td>&nbsp;</td>
-												
-											<td class="cart_text_2">10:00 AM - 3:00 PM</td>		
-																				</tr>
-																			<tr id="WEDNESDAY">
-											<td align="left" class="cart_text_2" style="display:block;">
-												<strong>WEDNESDAY</strong></td>
-											<td>&nbsp;</td>
-												
-											<td class="cart_text_2">10:00 AM - 3:00 PM</td>		
-																				</tr>
-																			<tr id="THURSDAY">
-											<td align="left" class="cart_text_2" style="display:block;">
-												<strong>THURSDAY</strong></td>
-											<td>&nbsp;</td>
-												
-											<td class="cart_text_2">10:00 AM - 3:00 PM</td>		
-																				</tr>
-																			<tr id="FRIDAY">
-											<td align="left" class="cart_text_2" style="display:block;">
-												<strong>FRIDAY</strong></td>
-											<td>&nbsp;</td>
-												
-											<td class="cart_text_2">10:00 AM - 6:00 PM</td>		
-																				</tr>
-																			<tr id="SATURDAY">
-											<td align="left" class="cart_text_2" style="display:block;">
-												<strong>SATURDAY</strong></td>
-											<td>&nbsp;</td>
-												
-											<td class="cart_text_2">10:00 AM - 6:00 PM</td>		
-																				</tr>
-																			<tr id="SUNDAY">
-											<td align="left" class="cart_text_2" style="display:block;">
-												<strong>SUNDAY</strong></td>
-											<td>&nbsp;</td>
-												
-											<td class="cart_text_2">10:00 AM - 3:00 PM</td>		
-																				</tr>
-															
 									</table>
-								</div>
-							</td>
-						</tr>
-					<!-- End view working time -->
-						  
-					
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2" align="left" bordercolor="#FFFFFF" class="">
+									<table width="50%" border="0">
+										<tr>
+											<td width="50%" rowspan="4" class="cart_text_2">
+												<div class="ui-corner-all" style="border: 1px solid #b5b7b4; margin-top: 10px; display:block; position:relative; padding:15px;">
+													<img src="https://www.onlineorderingdemo.com/css/images/icons/arrow.png" style="float: left; padding: 5px; vertical-align: middle;" />
+													<strong>Choose a Menu Category to Begin Your Order</strong>
+												</div>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2" align="left">&nbsp;</td>
+							</tr>
+							<tr>
+								<td colspan="2" align="left">&nbsp;</td>
+							</tr>
+							<tr>
+								<td align="center" id="errorMsgStr"></td>
+							</tr>
+							<tr>
+								<td colspan="2" align="left" class="border_bottom2">
+									<div class="float_left icon_small user"></div>
+									<span>About Us</span>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2" align="left" class="cart_text_2">Our team at Fresh Local Bistro are committed to providing comfort food in a comfortable environment. All of our ingredients are grown locally and we offer a broad assortment of fair trade products from around the world. Support your local economy and stop by today!</td>
+							</tr>
+							<tr>
+								<td colspan="2" align="left">&nbsp;</td>
+							</tr>
+							<tr>
+								<td colspan="2" align="left" class="border_bottom2">
+									<div class="float_left icon_small info"></div>
+									<span>Order Information</span>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2" align="left">
+									<table width="100%"  border="0"> 
+										<tr>
+											<td width="12%" class="border_dotted cart_text_2">Notice for Pickup/Dine-In:</td>
+											<td width="29%" class="border_dotted cart_text_2">
+												<strong>
+												15 mins										</strong>
+											</td>
+										</tr>
+										<tr>
+											<td width="12%" class="border_dotted cart_text_2">Notice for Delivery:</td>
+											<td width="29%" class="border_dotted cart_text_2">
+												<strong>
+												30 mins										</strong>
+											</td>
+										</tr>
+																									  
+										<tr>
+											<td width="12%" class="border_dotted cart_text_2">Min. Delivery Amount:</td>
+											<td class="border_dotted cart_text_2"><strong>$10.00</strong></td>
+										</tr>
+										  
+										<tr>
+											<td width="12%" class="border_dotted cart_text_2">Delivery Zones & Fees:</td>
+											<td class="border_dotted cart_text_2"><a href="get_map9a08.html?restaurant_id=385&amp;del_status=1" rel="ibox&width=1000&height=480" title="View" style="text-decoration:none"><b><u>View</u></b> <img src="https://www.onlineorderingdemo.com/images/info_icon.png" width="18" height="16"></a></td>
+										</tr>
+										
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2" align="left" valign="top">&nbsp;</td>
+							</tr>
+							<tr>
+								<td colspan="2" align="left" class="border_bottom2">
+									<div class="float_left icon_small money"></div><span>Accepted Payments Online</span>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2" align="left" class="border_dotted">
+									<img src="https://www.onlineorderingdemo.com/images/99.png" width="45" height="28" vspace="5" class="tTip" title="We accept Cash" /> 
+									<img src="https://www.onlineorderingdemo.com/images/15.png" width="45" height="28" vspace="5" class="tTip" title="We accept Visa"/> 
+									<img src="https://www.onlineorderingdemo.com/images/16.png" width="45" height="28" vspace="5" class="tTip" title="We accept MasterCard"/>
+									<img src="https://www.onlineorderingdemo.com/images/17.png" width="45" height="28" vspace="5" class="tTip" title="We accept Discover"/> 
+									<img src="https://www.onlineorderingdemo.com/images/18.png" width="45" height="28" vspace="5" class="tTip" title="We accept American Express"/>
+									<span class="tTip" title="We accept House Account: 							Double click to add tooltip.										Please include your 14 digit house account number" ><img src="https://www.onlineorderingdemo.com/images/custompayment.png" width="45" height="28" vspace="5" /><b style="vertical-align: 15px;">House Account</b></span>&nbsp;
+								</td>
+							</tr>          
+							<!-- View working time -->			
+							<tr>
+								<td colspan="2" align="left">		
+									<div align="left">
+										<table border="0" align="left" cellpadding="2" cellspacing="0" width="100%" class="">
+											<tr>
+												<td colspan="3" align="left" class="border_bottom2">
+													<div class="float_left icon_small clock"></div><span>Store Hours</span>
+												</td>
+											</tr>
+											<tr id="MONDAY">
+												<td align="left" class="cart_text_2" style="display:block;">
+													<strong>MONDAY</strong></td>
+												<td>&nbsp;</td>
+											
+												<td class="cart_text_2">10:00 AM - 3:00 PM</td>		
+																					</tr>
+											<tr id="TUESDAY">
+												<td align="left" class="cart_text_2" style="display:block;">
+													<strong>TUESDAY</strong></td>
+												<td>&nbsp;</td>
+												
+												<td class="cart_text_2">10:00 AM - 3:00 PM</td>		
+											</tr>
+											<tr id="WEDNESDAY">
+												<td align="left" class="cart_text_2" style="display:block;">
+													<strong>WEDNESDAY</strong></td>
+												<td>&nbsp;</td>
+											
+												<td class="cart_text_2">10:00 AM - 3:00 PM</td>		
+											</tr>
+											<tr id="THURSDAY">
+												<td align="left" class="cart_text_2" style="display:block;">
+													<strong>THURSDAY</strong>
+												</td>
+												<td>&nbsp;</td>
+													
+												<td class="cart_text_2">10:00 AM - 3:00 PM</td>		
+											</tr>
+											<tr id="FRIDAY">
+												<td align="left" class="cart_text_2" style="display:block;">
+													<strong>FRIDAY</strong>
+												</td>
+												<td>&nbsp;</td>
+												
+												<td class="cart_text_2">10:00 AM - 6:00 PM</td>		
+											</tr>
+											<tr id="SATURDAY">
+												<td align="left" class="cart_text_2" style="display:block;">
+													<strong>SATURDAY</strong></td>
+												<td>&nbsp;</td>
+												
+												<td class="cart_text_2">10:00 AM - 6:00 PM</td>		
+											</tr>
+											<tr id="SUNDAY">
+												<td align="left" class="cart_text_2" style="display:block;">
+													<strong>SUNDAY</strong></td>
+												<td>&nbsp;</td>
+												<td class="cart_text_2">10:00 AM - 3:00 PM</td>		
+											</tr>
+										</table>
+									</div>
+								</td>
+							</tr>
+							<!-- End view working time -->
+							<?php 
+						} ?>
+						
 						<tr>
 							<td colspan="2" align="left" valign="top">&nbsp;</td>
 						</tr>
@@ -1895,63 +1899,3 @@ if(isset($menu_id) && !empty($menu_id)) {
 	<!-- Mirrored from www.onlineorderingdemo.com/freshlocalbistro by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Apr 2015 12:05:37 GMT -->
 	</html>
 <?php } ?>
-<?phpexit;
-$getStoreData= Mage::helper('restaurant')->getStoreData();
-$getAllCategoriesDATA= Mage::helper('restaurant')->getAllCategoriesDATA();
-//print_r($getAllCategoriesDATA);?>
-<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
-<?php //$collection = $this->getCollection(); ?>
-<?php $collection = Mage::getModel('restaurant/item')->getCollection()->addFieldToFilter('restaurantmenu_id', $this->getRequest()->getParam('id')); ?>
-
-<div class="page-title adverizent">
-	<h1><?php echo $this->__('Menu Items') ?></h1>
-	<a href="<?php echo $this->getUrl('restaurant/item/add/menuid/'.$this->getRequest()->getParam('id')); ?>" class="common-orange-button"><?php echo $this->__('Add Item'); ?></a><div class="clear"></div>
-</div>
-<div style="clear:both"></div>
-<?php echo $this->getToolbarHtml(); ?>
-<?php if($collection->getSize()): ?>
-	<table class="data-table" id="my-custom-table">
-		<col width="1" />
-		<col width="1" />
-		<col />
-		<col width="1" />
-		<col width="1" />
-		<col width="1" />
-		<thead>
-			<tr>
-				<th><?php echo $this->__('ID #') ?></th>
-				<th><?php echo $this->__('Name') ?></th>
-				<th><?php echo $this->__('Image') ?></th>
-				<th><?php echo $this->__('Price') ?></th>
-				<th><?php echo $this->__('Category') ?></th>
-				<th><span class="nobr"><?php echo $this->__('Created') ?></span></th>
-				<th><span class="nobr"><?php echo $this->__('Action') ?></span></th>
-			</tr>
-		</thead>
-		<tbody>
-			<?php $_odd = '';
-			$path = Mage::getBaseUrl('media') ."restaurant_menu/" ;
-			?>
-			<?php foreach ($collection as $_obj): ?>
-				<tr>
-					<td><?php echo $_obj->getItemId() ?></td>
-					<td><?php echo $_obj->getName() ?></td>
-					<td><span class="nobr"><img src="<?php echo $path.$_obj->getImage(); ?>" width="120"></span></td>
-					<td><?php echo $_obj->getPrice() ?></td>
-					<td><?php echo $_obj->getCategory() ?></td>
-					<td><?php echo $this->formatDate($_obj->getCreatedTime()) ?></td>
-					<td>
-						<a href="<?php echo $this->getUrl('restaurant/item/delete', array('id' => $_obj->getItemId())) ?>"><?php echo $this->__('Delete') ?></a>
-						/
-						<a href="<?php echo $this->getUrl('restaurant/item/edit', array('id' => $_obj->getItemId())) ?>"><?php echo $this->__('Edit') ?></a>
-					</td>
-				</tr>
-			<?php endforeach; ?>
-		</tbody>
-	</table>
-<script type="text/javascript">decorateTable('my-custom-table');</script>
-<?php echo $this->getToolbarHtml(); ?>
-<?php else: ?>
-    <p><?php echo $this->__('No restaurant menus available.'); ?></p>
-<?php endif ?>
-
