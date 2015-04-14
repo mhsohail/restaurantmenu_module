@@ -10,4 +10,8 @@ class Livetameion_Restaurant_CmenuController extends Mage_Core_Controller_Front_
 		$this->renderLayout();
 	}
 	
+	public function categoryAction() {
+		$this->loadLayout(); 
+		$this->renderLayout();
+	}
 }
