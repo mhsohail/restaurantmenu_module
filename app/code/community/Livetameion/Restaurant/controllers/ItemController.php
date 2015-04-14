@@ -157,6 +157,7 @@ class Livetameion_Restaurant_ItemController extends Mage_Core_Controller_Front_A
 							->setName($data['item_name'][$i])
 							->setImage($uplaoedFilename)
 							->setPrice($data['item_price'][$i])
+							->setCategory($data['category'][$i])
 							->save();
 						$itemModel->unsetData();
 					}
