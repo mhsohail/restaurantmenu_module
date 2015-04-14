@@ -22,6 +22,10 @@
 <?php
 
 //echo "<pre>";
+$menu_id = $this->getRequest()->getParam("id");
+if(isset($menu_id) && !empty($menu_id)) {
+	echo "id: " . $menu_id;exit;
+}
 $items = Mage::helper('restaurant')->getMenuItemsFor(1);
 foreach($items as $item) {
 	//print_r($item->getData());
@@ -232,10 +236,10 @@ a:hover
 	border-right-width: 1px;
 	border-bottom-width: 1px;
 	border-left-width: 1px;
-	border-top-style: solid;
-	border-right-style: solid;
-	border-bottom-style: solid;
-	border-left-style: solid;
+	/* border-top-style: solid; */
+	/* border-right-style: solid; */
+	/* border-bottom-style: solid; */
+	/* border-left-style: solid; */
 	border-top-color: #663300;
 	border-right-color: #663300;
 	border-bottom-color: #663300;
@@ -285,10 +289,10 @@ a:hover
 	border-right-width: 1px;
 	border-bottom-width: 1px;
 	border-left-width: 1px;
-	border-top-style: solid;
-	border-right-style: solid;
-	border-bottom-style: solid;
-	border-left-style: solid;
+	/* border-top-style: solid; */
+	/* border-right-style: solid; */
+	/* border-bottom-style: solid; */
+	/* border-left-style: solid; */
 
 	border-top-color: #663300;
 	border-right-color: #663300;
@@ -400,7 +404,7 @@ input.buttonhov
 }
 .cart_border_top
 {
-	border-top-style: solid;
+	/* border-top-style: solid; */
 	border-top-width: 1px;
 	border-top-color: #363636;
 }
@@ -531,7 +535,7 @@ input.buttonhov
 	color:#ffffff;
 	height:34px; line-height:34px;
 	padding: 6px;
-	border: 1px solid #363636;
+	/* border: 1px solid #363636; */
 	background-color: #363636;
 	background-image:url('css/cosmetics/standard_layer_mask_1x36.png');
 	background-position:top left;
@@ -546,7 +550,7 @@ input.buttonhov
 
 .cart_bottom
 {
-	border: 1px solid #363636;
+	/* border: 1px solid #363636; */
 	background-color: #363636;
 	-moz-border-radius: 0px 0px 5px 5px; 
 	-webkit-border-radius: 0px 0px 5px 5px;  
@@ -790,7 +794,7 @@ a:hover.buttonicon
 */
 .footer
 {
-	border-top-style: solid; 
+	/* border-top-style: solid; */
 	border-top-width: 2px; 
 	border-color: #d9d9d9;
 }
@@ -1441,8 +1445,6 @@ img
              				</td>
 						 <td align="center" valign="top">  
 				<table width="95%" border="0"  cellspacing="0" cellpadding="0">
-										<td width="180" align="center" valign="top" style="padding-left:10px; width:100%;">
-										</td>
 					<tr>
 						<td class="cu_inner_heading" align="left">
 							<div style="line-height:36px;font-size:15px;">
