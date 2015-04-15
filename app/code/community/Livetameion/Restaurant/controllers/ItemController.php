@@ -203,6 +203,7 @@ class Livetameion_Restaurant_ItemController extends Mage_Core_Controller_Front_A
 				$data = array(
 					'name' => $post['item_name'],
 					'price' => $post['item_price'],
+					'category' => $post['category'],
 					'image' => $post['item_image'],
 				);
 				
