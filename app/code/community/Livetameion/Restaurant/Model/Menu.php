@@ -19,6 +19,14 @@
  */
 
 class Livetameion_Restaurant_Model_Menu extends Mage_Core_Model_Abstract {
+	
+	// EAV code
+	// ENTITY value is factory_alias_entityTableName
+	const ENTITY = 'livetameion_restaurant_menu';
+	protected $_eventPrefix = 'livetameion_restaurant';
+    protected $_eventObject = 'menu';
+	// EAV code
+	
 	protected function _construct() {
 		parent::_construct();
 		$this->_init('restaurant/menu');
