@@ -39,4 +39,36 @@ $installer->run("
 	ALTER TABLE {$this->getTable('restaurant/item')}
 	ADD COLUMN `category` VARCHAR(255) NOT NULL AFTER `price`;");
 
+$installer->run("
+-- DROP TABLE IF EXISTS {$this->getTable('restaurant/category')};
+CREATE TABLE {$this->getTable('restaurant/category')} (
+	`id` int(11) NOT NULL AUTO_INCREMENT,
+	`parent_id` varchar(255) NOT NULL,
+	`restaurantmenu_id` int(11) NOT NULL,
+	`name` varchar(255) NOT NULL,
+	`image` varchar(255) NOT NULL,
+	`url_key` varchar(255) NOT NULL,	
+	`createddate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	`modifieddate` datetime NOT NULL,
+	PRIMARY KEY (`id`)
+)
+ENGINE = InnoDB;");
+
+$installer->run("
+-- DROP TABLE IF EXISTS {$this->getTable('restaurant/category_merchant')};
+CREATE TABLE {$this->getTable('restaurant/category_merchant')} (
+	`id` int(11) NOT NULL AUTO_INCREMENT,
+	`category_id` varchar(255) NOT NULL,
+	`merchant_id` int(11) NOT NULL,
+	PRIMARY KEY (`id`)
+)
+ENGINE = InnoDB;");
+
+/*
+// add foreign key constraints
+$installer->run("
+ALTER TABLE {$this->getTable('restaurant/category')}
+ADD CONSTRAINT `fk_restaurant_menu_item_id_restaurant_menu_id`
+FOREIGN KEY (`restaurantmenu_id`) REFERENCES `{$this->getTable('restaurant/menu')}`(`restaurantmenu_id`) ON UPDATE CASCADE ON DELETE CASCADE;");
+*/
 $installer->endSetup();

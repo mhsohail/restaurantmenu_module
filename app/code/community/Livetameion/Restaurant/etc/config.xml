@@ -57,7 +57,7 @@
             </restaurant>
 			
             <restaurant_resource>
-                <class>Livetameion_Restaurant_Model_Resource</class>                               
+                <class>Livetameion_Restaurant_Model_Resource</class>
                 <entities>
 					<!-- The following <menu> model tag is used in Mage::getModel('model_name/entity_name') -->
 					<!-- So, in this case, we will use Mage::getModel('model_name/menu') and so for all entities defined in entities tag -->
@@ -68,6 +68,9 @@
 					<item>
                         <table>restaurant_menu_item</table>
                     </item>
+					<category>
+                        <table>restaurant_menu_category</table>
+                    </category>
                 </entities>
             </restaurant_resource>
           <!-- <customer_resource>

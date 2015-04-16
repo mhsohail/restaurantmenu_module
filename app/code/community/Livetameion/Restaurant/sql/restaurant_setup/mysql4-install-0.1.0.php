@@ -61,4 +61,10 @@ CREATE TABLE {$this->getTable('restaurant/item')} (
 ENGINE = InnoDB;"
 );
 
+// add foreign key constraints
+$installer->run("
+ALTER TABLE {$this->getTable('restaurant/item')}
+ADD CONSTRAINT `fk_restaurant_menu_item_id_restaurant_menu_id`
+FOREIGN KEY (`restaurantmenu_id`) REFERENCES `restaurant_menu`(`restaurantmenu_id`) ON UPDATE CASCADE ON DELETE CASCADE;");
+  
 $installer->endSetup();
