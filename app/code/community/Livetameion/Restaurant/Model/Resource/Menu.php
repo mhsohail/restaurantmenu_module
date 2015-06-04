@@ -18,8 +18,14 @@
  * @author     Javed Alam <javed.alam@cwsinfotech.com>
  */
 
-class Livetameion_Restaurant_Model_Resource_Menu extends Mage_Core_Model_Resource_Db_Abstract {
+class Livetameion_Restaurant_Model_Resource_Menu extends Mage_Eav_Model_Entity_Abstract {
 	protected function _construct() {
-		$this->_init('restaurant/menu','restaurantmenu_id');
+		$resource = Mage::getSingleton('core/resource');
+		$this->setType(Livetameion_Restaurant_Model_Menu::ENTITY);
+		
+		$this->setConnection(
+			$resource->getConnection('restaurant_read'),
+			$resource->getConnection('restaurant_write')
+		);
 	}
 }

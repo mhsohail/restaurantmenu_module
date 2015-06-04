@@ -18,7 +18,7 @@
  * @author     Javed Alam <javed.alam@cwsinfotech.com>
  */
 
-class Livetameion_Restaurant_Model_Resource_Menu_Collection extends Mage_Core_Model_Resource_Db_Collection_Abstract {
+class Livetameion_Restaurant_Model_Resource_Menu_Collection extends Mage_Eav_Model_Entity_Collection_Abstract {
 	protected function _construct() {
 		$this->_init('restaurant/menu');
     }

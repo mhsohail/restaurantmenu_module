@@ -18,33 +18,29 @@
  * @author     Javed Alam <javed.alam@cwsinfotech.com>
  */
 
-class Livetameion_Restaurant_Helper_Data extends Mage_Core_Helper_Abstract {
+class Livetameion_Restaurant_Helper_Data extends Mage_Core_Helper_Data {
 
 const MARKETPLACE_ENABLE = "marketplace/marketplace/enable";
 const MARKETPLACE_STATUS_APPROVED = "marketplace/status/approved";
 
-
-
-
-		public function isMarketplaceEnabled() {
-				//return (bool) Mage::getStoreConfig(self::MARKETPLACE_ENABLE, Mage::app()->getStore());
-				return true;
+	public function isMarketplaceEnabled() {
+		//return (bool) Mage::getStoreConfig(self::MARKETPLACE_ENABLE, Mage::app()->getStore());
+		return true;
+	}
+	
+	public function isMarketplaceActiveSellar() {
+		return true;
+		/*if ($this->isMarketplaceEnabled()) {
+		$customer = Mage::getSingleton('customer/session')->getCustomer();
+		if ($customer->getStatus() == Mage::getStoreConfig(self::MARKETPLACE_STATUS_APPROVED) && (bool) $customer->getSellerSubscriber()) {
+		return true;
+		} else {
+		return false;
 		}
-
-		public function isMarketplaceActiveSellar()
-		{
-			return true;
-			/*if ($this->isMarketplaceEnabled()) {
-			$customer = Mage::getSingleton('customer/session')->getCustomer();
-			if ($customer->getStatus() == Mage::getStoreConfig(self::MARKETPLACE_STATUS_APPROVED) && (bool) $customer->getSellerSubscriber()) {
-			return true;
-			} else {
-			return false;
-			}
-			} else {
-			return false;
-			}*/
-		}
+		} else {
+		return false;
+		}*/
+	}
 
 
 		public function getAllstoreColletion()

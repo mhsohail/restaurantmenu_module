@@ -22,7 +22,7 @@
 <config>
     <modules>
         <Livetameion_Restaurant>
-            <version>0.1.1</version>
+            <version>0.1.0</version>
         </Livetameion_Restaurant>
     </modules>
    <!-- <default>
@@ -88,9 +88,19 @@
             <restaurant_setup>
                 <setup>
                     <module>Livetameion_Restaurant</module>
-                    <class>Mage_Catalog_Model_Resource_Setup</class>
+                    <class>Livetameion_Restaurant_Model_Resource_Setup</class>
                 </setup>
             </restaurant_setup>
+			<restaurant_write>
+                <connection>
+                    <use>default_write</use>
+                </connection>
+            </restaurant_write>
+            <restaurant_read>
+                <connection>
+                    <use>default_read</use>
+                </connection>
+            </restaurant_read>
         </resources>
         <helpers>
 			<!-- The following <restaurant> helper tag is used in Mage::helper('restaurant') -->
@@ -99,6 +109,7 @@
             </restaurant>
         </helpers>
     </global>
+	
     <frontend>
         <routers>
             <livetameion_restaurant>
